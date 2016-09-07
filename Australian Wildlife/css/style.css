@@ -1,9 +1,11 @@
 body, html {
-  height: 100%;
-  margin: 0;
+  height: 744px;
+  margin: 0 auto;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
+  min-width: 1346px;
 }
+
 
 div{
 	color: #777;
@@ -20,28 +22,28 @@ div{
 }
 .bgimg-1 {
   background-image: url(../images/title.jpg);
-min-height: 100%;
+min-height: 744px;
     
 }
 
 .bgimg-2 {
   background-image: url(../images/about.jpg);
-  min-height: 100%;
+  min-height: 744px;
 }
 
 .bgimg-3 {
   background-image: url(../images/grass.jpg);
-  min-height: 100%;
+  min-height: 744px;
 }
 
 .bgimg-4 {
   background-image: url(../images/ground.jpg);
-  min-height: 100%;
+  min-height: 744px;
 }
 
 .bgimg-5 {
   background-image: url(../images/sea.jpg);
-  min-height: 100%;
+  min-height: 744px;
 }
 
 
@@ -80,9 +82,9 @@ nav{
 	background-color: rgba(242,242,242, .2);
 	clear:both;
 	position:fixed;
-	display: inline-block;
+	display: inline－block;
 	vertical-align: middle;
-	width:100%;
+	width:1346px;
 	height: 50px;
 	margin-top:0px;
 	z-index:100;
