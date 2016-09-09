@@ -1,18 +1,49 @@
 body, html {
   height: 100%;
+<<<<<<< HEAD
   margin: 0 auto;
   font: 400 15px/1.8 "Lato", sans-serif;
   color: #777;
 
+=======
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+>>>>>>> d38d8f7262ec5d0658b0249ae07044c00508112a
 }
 
+h1{
+	color:white;
+	font-size:9em;
+	line-height: 150px;
+	margin-bottom: 0;
+	text-shadow: 2px 2px 4px #000000;
+	
+}
 
-div{
-	color: #777;
-	background-color:white;
-	text-align:center;
-	padding:50px 80px;
-	text-align: justify;
+img{
+	position:absolute;
+	left:50%;
+	top:20%;
+}
+
+#paragraph{
+	color:white;
+	font-size:1.5em;
+	text-shadow: 2px 2px 4px #2C3539;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+#paragraph{
+	margin:auto;
+	width: 70%;
 }
 
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
@@ -22,46 +53,27 @@ div{
 }
 .bgimg-1 {
   background-image: url(../images/title.jpg);
-min-height: 744px;
-    
+min-height: 100%;
 }
 
 .bgimg-2 {
   background-image: url(../images/about.jpg);
-  min-height: 744px;
+  min-height: 100%;
 }
 
 .bgimg-3 {
   background-image: url(../images/grass.jpg);
-  min-height: 744px;
+  min-height: 100%;
 }
 
 .bgimg-4 {
   background-image: url(../images/ground.jpg);
-  min-height: 744px;
+  min-height: 100%;
 }
 
 .bgimg-5 {
   background-image: url(../images/sea.jpg);
-  min-height: 744px;
-}
-
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-.caption span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
+  min-height: 100%;
 }
 
 h3 {
@@ -82,7 +94,7 @@ nav{
 	background-color: rgba(242,242,242, .2);
 	clear:both;
 	position:fixed;
-	display: inline－block;
+	display: inline-block;
 	vertical-align: middle;
 	width:100%;
 	height: 50px;
@@ -113,6 +125,7 @@ a:active,a:focus{
 	color:#ffffff;
 }
 
+<<<<<<< HEAD
 #Wombat {
     position: absolute;
     left: 30%;
@@ -129,6 +142,14 @@ a:active,a:focus{
 .left{
 	width:50%;
 	margin-left: 20%;
+=======
+.thumbnail:hover {
+    position:absolute;
+    width:250px;
+    height:auto;
+    display:block;
+    z-index:999;
+>>>>>>> d38d8f7262ec5d0658b0249ae07044c00508112a
 }
 
 footer{
@@ -138,3 +159,86 @@ footer{
 	text-align: center;
 	padding-left: 20px;
 }
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {font-family: "Lato", sans-serif;}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+
