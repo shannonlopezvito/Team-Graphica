@@ -1,14 +1,8 @@
 body, html {
-  height: 100%;
-<<<<<<< HEAD
-  margin: 0 auto;
-  font: 400 15px/1.8 "Lato", sans-serif;
-  color: #777;
-
-=======
-  margin: 0;
-  font: 400 15px/1.8 "Lato", sans-serif;
->>>>>>> d38d8f7262ec5d0658b0249ae07044c00508112a
+	height: 100%;
+	margin: 0;
+	font: 400 15px/1.8 "Lato", sans-serif;
+	 
 }
 
 h1{
@@ -17,63 +11,6 @@ h1{
 	line-height: 150px;
 	margin-bottom: 0;
 	text-shadow: 2px 2px 4px #000000;
-	
-}
-
-img{
-	position:absolute;
-	left:50%;
-	top:20%;
-}
-
-#paragraph{
-	color:white;
-	font-size:1.5em;
-	text-shadow: 2px 2px 4px #2C3539;
-}
-
-.caption {
-  position: absolute;
-  left: 0;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
-
-#paragraph{
-	margin:auto;
-	width: 70%;
-}
-
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-}
-.bgimg-1 {
-  background-image: url(../images/title.jpg);
-min-height: 100%;
-}
-
-.bgimg-2 {
-  background-image: url(../images/about.jpg);
-  min-height: 100%;
-}
-
-.bgimg-3 {
-  background-image: url(../images/grass.jpg);
-  min-height: 100%;
-}
-
-.bgimg-4 {
-  background-image: url(../images/ground.jpg);
-  min-height: 100%;
-}
-
-.bgimg-5 {
-  background-image: url(../images/sea.jpg);
-  min-height: 100%;
 }
 
 h3 {
@@ -83,6 +20,77 @@ h3 {
   color: #111;
 }
 
+/*Style for the home section*/
+#paragraph{
+	color:white;
+	font-size:1.5em;
+	text-shadow: 2px 2px 4px #2C3539;
+	margin:auto;
+	width: 70%;
+}
+
+.caption {
+	position: absolute;
+	left: 0;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	color: #000;
+}
+
+/*Style for animal images*/
+#flyingfox{
+	position:absolute;
+	left:50%;
+	top:20%;
+}
+
+#kookaburra{
+	position:absolute;
+	left:20%;
+	top:70%;
+}
+
+.animalimage:hover {
+	-webkit-transform: scale(1.4); 
+    -moz-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+/*Style for habitat background*/
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
+
+.bgimg-1 {
+	background-image: url(../images/title.jpg);
+	min-height: 100%;
+}
+
+.bgimg-2 {
+	background-image: url(../images/about.jpg);
+	min-height: 100%;
+}
+
+.bgimg-3 {
+	background-image: url(../images/grass.jpg);
+	min-height: 100%;
+}
+
+.bgimg-4 {
+	background-image: url(../images/ground.jpg);
+	min-height: 100%;
+}
+
+.bgimg-5 {
+	background-image: url(../images/sea.jpg);
+	min-height: 100%;
+}
+
+/*Style for navigation*/
 nav li{
 	font-size:1.1em;
 	display:inline;
@@ -106,6 +114,7 @@ ul{
 	text-align:center;
 }
 
+/*Style for links*/
 a,a:link{
 	text-decoration:none;
 	color: white;
@@ -125,33 +134,7 @@ a:active,a:focus{
 	color:#ffffff;
 }
 
-<<<<<<< HEAD
-#Wombat {
-    position: absolute;
-    left: 30%;
-    top: 43%;
-}
-
-#Echidna {
-    position: absolute;
-    left:20%;
-    top:60%
-}
-
-
-.left{
-	width:50%;
-	margin-left: 20%;
-=======
-.thumbnail:hover {
-    position:absolute;
-    width:250px;
-    height:auto;
-    display:block;
-    z-index:999;
->>>>>>> d38d8f7262ec5d0658b0249ae07044c00508112a
-}
-
+/*Style for footer*/
 footer{
 	color:white;
 	background-color:#0076BE;
@@ -177,9 +160,9 @@ footer{
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
-    margin: 30px;
+    margin-left: 30px;
     padding: 20px;
-    border: 1px solid #888;
+    border: 2px solid black;
     width: 40%;
 }
 
@@ -198,16 +181,12 @@ footer{
     cursor: pointer;
 }
 
-body {font-family: "Lato", sans-serif;}
-ul.tab li a:hover {
+/* Change background color of links on hover */
+ul.tab li:hover {
     background-color: #ddd;
 }
 
-/* Create an active/current tablink class */
-ul.tab li a:focus {
-    background-color: #ccc;
-}
-
+/* Style the tab content */
 .tabcontent {
     display: none;
     padding: 6px 12px;
@@ -216,99 +195,34 @@ ul.tab li a:focus {
 }
 
 .tab {
-  text-align: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  line-height: 24px;
-  position: relative;
+	text-align: center;
+	list-style: none;
+    width: 30%;
+	margin-left: 30px;
+	margin-top:0px;
+	margin-bottom:0px;
+	padding: 0;
+	line-height: 24px;
+	position: relative;
 }
 .tab li {
-  margin: 0 10px;
-  padding: 0 10px;
-  border: 1px solid #AAA;
-  background: #ECECEC;
-  display: inline-block;
+	margin: 0 10px;
+	padding: 0 10px;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+    border-top: 2px solid black;
+	background: #ECECEC;
+	display: inline-block;
 }
 
-
-.tab:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid #AAA;
-  z-index: 1;
-}
-
-.tab:before {
-  z-index: 1;
-}
 .tab li {
 	position: relative;
-  z-index: 0;
+	z-index: 0;
 }
+
 ul.tab li a {
-  background: #FFF;
-  color: #000;
-}
-
-ul.tab li a .tablinks{
-  z-index: 2;
-  border-bottom-color: #FFF;
-}
-
-ul.tab li a:before,
-ul.tab li a:after {
-  position: absolute;
-  bottom: -1px;
-  width: 6px;
-  height: 6px;
-  content: " ";
-}
-ul.tab li a:before {
-  left: -6px;
-}
-ul.tab li a:after {
-  right: -6px;
-}
-ul.tab li a:after, ul.tab li a:before {
-  border: 1px solid #AAA;
-}
-ul.tab li a{
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
-ul.tab li a:before {
-  border-bottom-right-radius: 6px;
-  border-width: 0 1px 1px 0;
-}
-ul.tab li a:after {
-  border-bottom-left-radius: 6px;
-  border-width: 0 0 1px 1px;
+	color: #000;
+	font-weight: bold; 
 }
 
 
-ul .tab li a:before {
-  box-shadow: 2px 2px 0 #ECECEC;
-}
-ul .tab li a:after {
-  box-shadow: -2px 2px 0 #ECECEC;
-}
-ul .tab li.tablinks a:before {
-  box-shadow: 2px 2px 0 #FFF;
-  
-}
-ul .tab li.tablinks a:after {
-  box-shadow: -2px 2px 0 #FFF;
- 
-}
-
-ul .tab li a {
-  background: linear-gradient(to bottom, #ECECEC 50%, #D1D1D1 100%);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 1px 0 #FFF;
-  text-shadow: 0 1px #FFF;
-  margin: 0 -5px;
-  padding: 0 20px;
-}
