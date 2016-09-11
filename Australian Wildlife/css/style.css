@@ -1,7 +1,14 @@
 body, html {
   height: 100%;
+<<<<<<< HEAD
+  margin: 0 auto;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+
+=======
   margin: 0;
   font: 400 15px/1.8 "Lato", sans-serif;
+>>>>>>> d38d8f7262ec5d0658b0249ae07044c00508112a
 }
 
 h1{
@@ -118,12 +125,31 @@ a:active,a:focus{
 	color:#ffffff;
 }
 
+<<<<<<< HEAD
+#Wombat {
+    position: absolute;
+    left: 30%;
+    top: 43%;
+}
+
+#Echidna {
+    position: absolute;
+    left:20%;
+    top:60%
+}
+
+
+.left{
+	width:50%;
+	margin-left: 20%;
+=======
 .thumbnail:hover {
     position:absolute;
     width:250px;
     height:auto;
     display:block;
     z-index:999;
+>>>>>>> d38d8f7262ec5d0658b0249ae07044c00508112a
 }
 
 footer{
