@@ -51,6 +51,15 @@ h3 {
 	top:70%;
 }
 
+#koala{ 
+    z-index: 0;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+}
+
+
+/*habitat images*/
 #cloud{
 	position: absolute;
 	left:35%;
@@ -58,6 +67,8 @@ h3 {
 	}
 
 #tree{
+    pointer-events: none;
+    z-index: 1;
 	position: absolute;
 	left: 10%;
 	top: 0%;
@@ -266,7 +277,7 @@ ul.tab li a {
 	font-weight: bold; 
 }
 
-.more_info span {
+.more_info a {
   color: black;
   display: initial;
   left: 20%;
@@ -287,7 +298,7 @@ ul.tab li a {
    font-size: 20px;
 }
 
-.more_info:hover span {
+.more_info:hover a {
   opacity: 1;
 }
 

@@ -6,6 +6,13 @@ var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordse
 var found = 0;
 
 $(document).ready(function(){
+
+
+	$("#koala").click(function(){
+	  $("#koala").css({"z-index": 2});
+	});
+
+
 // Get the modal
 var modal = document.getElementById('myModal');
 // Get the button that opens the modal
