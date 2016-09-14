@@ -51,24 +51,25 @@ h3 {
 	top:70%;
 }
 
-<<<<<<< HEAD
 #numbat{
     position:absolute;
-    left:60%;
-    top:250%;
+    left:50%;
+    top:265%;
 }
 
 #tasmaniandevil{
     position:absolute;
-    left:10%;
-    top:255%;
+    left:0%;
+    top:250%;
 }
 
 #wallaby{
     position:absolute;
     left:30%;
-    top:260%;
+    top:230%;
 }
+<<<<<<< HEAD
+
 =======
 #koala{ 
     z-index: 0;
