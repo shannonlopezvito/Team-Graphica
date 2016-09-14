@@ -53,24 +53,25 @@ h3 {
 
 #numbat{
     position:absolute;
-    left:50%;
-    top:265%;
+    left:80%;
+    top:70%;
+	z-index:1;
+	z-index:1;
+
 }
 
 #tasmaniandevil{
     position:absolute;
-    left:0%;
-    top:250%;
+    left:10%;
+    top:60%;
 }
 
 #wallaby{
     position:absolute;
-    left:30%;
-    top:230%;
+    left:45%;
+    top:40%;
 }
-<<<<<<< HEAD
 
-=======
 #koala{ 
     z-index: 0;
     position: absolute;
@@ -80,7 +81,7 @@ h3 {
 
 
 /*habitat images*/
->>>>>>> 1e2e4039f4cd3505e6e6969d20236dfe07d1e393
+
 #cloud{
 	position: absolute;
 	left:35%;
@@ -299,6 +300,7 @@ ul.tab li a {
 }
 
 .more_info a {
+	z-index:2;
   color: black;
   display: initial;
   left: 20%;
