@@ -51,6 +51,7 @@ h3 {
 	top:70%;
 }
 
+<<<<<<< HEAD
 #numbat{
     position:absolute;
     left:60%;
@@ -68,6 +69,17 @@ h3 {
     left:30%;
     top:260%;
 }
+=======
+#koala{ 
+    z-index: 0;
+    position: absolute;
+    left: 25%;
+    top: 20%;
+}
+
+
+/*habitat images*/
+>>>>>>> 1e2e4039f4cd3505e6e6969d20236dfe07d1e393
 #cloud{
 	position: absolute;
 	left:35%;
@@ -75,6 +87,8 @@ h3 {
 	}
 
 #tree{
+    pointer-events: none;
+    z-index: 1;
 	position: absolute;
 	left: 10%;
 	top: 0%;
@@ -283,7 +297,7 @@ ul.tab li a {
 	font-weight: bold; 
 }
 
-.more_info span {
+.more_info a {
   color: black;
   display: initial;
   left: 20%;
@@ -304,7 +318,7 @@ ul.tab li a {
    font-size: 20px;
 }
 
-.more_info:hover span {
+.more_info:hover a {
   opacity: 1;
 }
 
