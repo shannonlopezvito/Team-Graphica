@@ -97,6 +97,35 @@ h3 {
     transform: scale(1.4);
 }
 
+/*pop up more info text*/
+
+.more_info:hover span {
+  opacity: 1;
+}
+
+span {
+  color: black;
+  display: initial;
+  left: 20%;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+  text-shadow:
+   -1px -1px 0 white,  
+    1px -1px 0 white,
+    -1px 1px 0 white,
+     1px 1px 0 white;
+   font-size: 20px;
+}
+
+
 /*Style for habitat background*/
 .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
 	position: relative;
