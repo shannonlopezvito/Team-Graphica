@@ -51,6 +51,23 @@ h3 {
 	top:70%;
 }
 
+#numbat{
+    position:absolute;
+    left:60%;
+    top:250%;
+}
+
+#tasmaniandevil{
+    position:absolute;
+    left:10%;
+    top:255%;
+}
+
+#wallaby{
+    position:absolute;
+    left:30%;
+    top:260%;
+}
 #cloud{
 	position: absolute;
 	left:35%;
