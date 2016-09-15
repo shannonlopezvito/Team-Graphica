@@ -1,8 +1,8 @@
 body, html {
 	height: 100%;
 	margin: 0;
-	font: 400 15px/1.8 "Lato", sans-serif;
-	 
+	font-family: sans-serif, Castella, Times New Roman;
+	font-size:15px; 
 }
 
 h1{
@@ -14,10 +14,10 @@ h1{
 }
 
 h3 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font: 20px "Lato", sans-serif;
-  color: #111;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	font: 20px "Lato", sans-serif;
+	color: #111;
 }
 
 /*Style for the home section*/
@@ -53,11 +53,9 @@ h3 {
 
 #numbat{
     position:absolute;
-    left:80%;
+	right:15%;
     top:70%;
 	z-index:1;
-	z-index:1;
-
 }
 
 #tasmaniandevil{
@@ -75,54 +73,53 @@ h3 {
 #koala{ 
     z-index: 0;
     position: absolute;
-    left: 25%;
-    top: 20%;
+    left: 20%;
+    top: 30%;
 }
-
 
 #blueshark{
 	position: absolute;
-	left: 30%;
+	left: 10%;
 	top: 50%;
-	}
+}
 
 #turtle{
 	position: absolute;
 	left: 50%;
 	top: 20%;
-	}
+}
 	
 #fairypenguin{
 	position: absolute;
 	left: 80%;
-	top: 30%;
-	}
-	
-/*habitat images*/
+	top: 40%;
+}
 
+
+/*habitat images*/
 #cloud{
 	position: absolute;
 	left:30%;
 	top:40%;
-	}
+}
 	
 #cloud1{
 	position: absolute;
 	left:70%;
 	top:10%;
-	}
+}
 
 #tree{
     pointer-events: none;
     z-index: 1;
 	position: absolute;
 	left: 10%;
-	top: 0%;
-	}
+	top: 10%;
+}
 	
 #bush{
 	position: absolute;
-	left: 70%;
+	right: 10%;
 	top:55%;
 }
 
@@ -136,31 +133,37 @@ h3 {
 	position: absolute;
 	left:10%;
 	top: 40%;
-	}
+}
 	
 #rock1{
 	position: absolute;
 	left: 70%;
 	top: 60%;
-	}
+}
 	
 #coral{
 	position:absolute;
-	left:0%;
-	top:60%;
-	}	
+	left:5%;
+	bottom:5%;
+}	
 	
 #coral1{
 	position:absolute;
-	left:70%;
-	top:55%;
-	}
+	right:5%;
+	bottom:0%;
+}
 	
-.animalimage:hover {
-	-webkit-transform: scale(1.4); 
-    -moz-transform: scale(1.4);
-    -o-transform: scale(1.4);
-    transform: scale(1.4);
+#person{
+	position:absolute;
+	right:5%;
+	top:10%;
+}
+
+.more_info:hover {
+	-webkit-transform: scale(1.2); 
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 /*Style for habitat background*/
@@ -223,7 +226,6 @@ ul{
 a,a:link{
 	text-decoration:none;
 	color: white;
-	
 }
 
 a:visited{
@@ -252,8 +254,8 @@ footer{
 .modal {
     display: none; /* Hidden by default */
     position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    z-index: 2; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -310,6 +312,7 @@ ul.tab li:hover {
 	line-height: 24px;
 	position: relative;
 }
+
 .tab li {
 	margin: 0 10px;
 	padding: 0 10px;
@@ -332,28 +335,27 @@ ul.tab li a {
 
 .more_info a {
 	z-index:2;
-  color: black;
-  display: initial;
-  left: 20%;
-  position: absolute;
-  top: 50%;
-  opacity: 0;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-transition: opacity 500ms;
-  -moz-transition: opacity 500ms;
-  -o-transition: opacity 500ms;
-  transition: opacity 500ms;
-  text-shadow:
-   -1px -1px 0 white,  
-    1px -1px 0 white,
+	color: black;
+	display: initial;
+	position: absolute;
+	top: 50%;
+	opacity: 0;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+	text-shadow:
+	-1px -1px 0 white,  
+	1px -1px 0 white,
     -1px 1px 0 white,
-     1px 1px 0 white;
-   font-size: 20px;
+    1px 1px 0 white;
+	font-size: 25px;
 }
 
 .more_info:hover a {
-  opacity: 1;
+	opacity: 1;
 }
 
 

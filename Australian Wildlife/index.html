@@ -21,8 +21,10 @@
             </ul>
         </nav>
     </header>
+	
 	<a name ="home"></a>
 	<div name="home" class="bgimg-1">
+		<img src="images/boy.png" id="person" alt="person" height="220px" width="auto">
 		<div class="caption">
 			<h1>Australian Wildlife</h1>
 			<div id="paragraph">
@@ -32,39 +34,37 @@
 	</div>
 
 	<a name="sky"></a>
-	<div class="bgimg-2">
-	 <div id="flyingfox" class="more_info">
-			<img src="images/fying fox.png" class="animalimage" alt="flying fox" height="200px" width="200px">
-		      <a href="#" >more info</a>
-	   </div>
-	   <div id="kookaburra" class="more_info">
-			<img src="images/kookaburra.png" class="animalimage" alt="kookaburra" height="100px" width="150px">
-             <a href="#" >more info</a>
-	   </div>
-			
-		<img src="images/cloud.png" id="cloud" class="backgroundimage" alt="cloud" height="200px" width="250px">
-		<img src="images/cloud1.png" id="cloud1" class="backgroundimage" alt="cloud1" height="200px" width="350px">
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-				<ul class="tab">
-					<li><a href="#" class="tablinks" id="description" onclick="openCity(event, 'Description')">Description</a></li>
-					<li><a href="#" class="tablinks" id="article" onclick="openCity(event, 'Article')">Article</a></li>
-					<li><a href="#" class="tablinks" id="images" onclick="openCity(event, 'Images')">Images</a></li>
-				</ul>
+	<div id="sky" class="bgimg-2">
+		<div id="flyingfox" class="more_info">
+			<img src="images/fying fox.png" alt="flying fox" height="200px" width="200px">
+		    <a href="#" >more info</a>
+		</div>
+		<div id="kookaburra" class="more_info">
+			<img src="images/kookaburra.png" alt="kookaburra" height="100px" width="150px">
+            <a href="#" >more info</a>
+		</div>
+		<img src="images/cloud.png" id="cloud" alt="cloud" height="200px" width="250px">
+		<img src="images/cloud1.png" id="cloud1" alt="cloud1" height="200px" width="350px">	
+		
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+			<ul class="tab">
+				<li><a href="#" class="tablinks" id="description" onclick="openCity(event, 'Description')">Description</a></li>
+				<li><a href="#" class="tablinks" id="article" onclick="openCity(event, 'Article')">Article</a></li>
+				<li><a href="#" class="tablinks" id="images" onclick="openCity(event, 'Images')">Images</a></li>
+			</ul>
 			<!-- Modal content -->
-			<div class="modal-content">
+			<div id="content" class="modal-content">
 				<span class="close">×</span>
 				<p>
 				<div id="Description" class="tabcontent">
 					<h3>Description</h3>
 					<p>Loading...</p>
 				</div>
-
 				<div id="Article" class="tabcontent">
 					<h3>Article</h3>
 					<p>Loading...</p> 
 				</div>
-
 				<div id="Images" class="tabcontent">
 					<h3>Images</h3>
 					<p>Loading...</p>
@@ -75,64 +75,56 @@
 	 </div>
 
 	<a name="grassland"></a>
-	<div class="bgimg-3">
-	
-		<img src="images/tree.png" id="tree" class="backgroundimage" alt="tree" height="500px" width="400px">
-		
-	  <div id="koala" class="more_info">
-		 <img src="images/koala.png" class="animalimage" alt="koala" height="100px" width="auto">
-		 <a href="#" >more info</a>
-	  </div>
-	  
-	  <div id="numbat" class="more_info">
-      <img src="images/Numbat.png" id="numbat"class="animalimage" alt="numbat" height="150px" width="auto">
-		  <a href="#" >more info</a>
+	<div id="grassland" class="bgimg-3">
+		<div id="numbat" class="more_info">
+			<img src="images/Numbat.png" alt="numbat" height="150px" width="auto">
+		    <a href="#" >more info</a>
+		</div>
+		<img src="images/tree.png" id="tree" alt="tree" height="500px" width="400px">
+		<div id="koala" class="more_info">
+			<img src="images/koala.png" alt="koala" height="100px" width="auto">
+			<a id ="hidden" href="#" >more info</a>
+		</div>   
+		<div id="tasmaniandevil" class="more_info">
+			<img src="images/Tasmanian_Devil.png" alt="Tasmanian Devil"  height="150px" width="auto">
+			<a href="#" >more info</a>
         </div>
-        
-    <div id="tasmaniandevil" class="more_info">
-      <img src="images/Tasmanian_Devil.png" id="numbat"class="animalimage" alt="Tasmanian Devil" height="150px" width="auto">
-		  <a href="#" >more info</a>
-        </div>
-        
         <div id="wallaby" class="more_info">
-      <img src="images/Wallaby.png" id="wallaby"class="animalimage" alt="Wallaby" height="220px" width="auto">
-		  <a href="#" >more info</a>
+			<img src="images/Wallaby.png" alt="Wallaby" height="220px" width="auto">
+			<a href="#" >more info</a>
         </div>
-		
-		<img src="images/bush.png" id="bush" class="backgroundimage" alt="bush" height="200px" width="auto">
-		<img src="images/bush1.png" id="bush1" class="backgroundimage" alt="bush1" height="200px" width="300">
+		<img src="images/bush.png" id="bush" alt="bush" height="200px" width="auto">
+		<img src="images/bush1.png" id="bush1" alt="bush1" height="200px" width="300">	
 	</div>
 	
  	
 	
 	<a name="underground"></a>
-	<div class="bgimg-4">
-	<img src="images/rock.png" id="rock" class="backgroundimage" alt="rock" height="200px" width="300px">
-		<img src="images/rock1.png" id="rock1" class="backgroundimage" alt="rock1" height="150px" width="250px">
+	<div id="underground" class="bgimg-4">
+		<img src="images/rock.png" id="rock" alt="rock" height="200px" width="300px">
+		<img src="images/rock1.png" id="rock1" alt="rock1" height="150px" width="250px">
 	</div>
 
 	<a name="sea"></a>
-	<div class="bgimg-5">
-			<img src="images/coral.png" id="coral" class="backgroundimage" alt="coral" height="250px" width="350px">
-		<img src="images/coral1.png" id="coral1" class="backgroundimage" alt="coral1" height="300px" width="350px">
+	<div id="sea" class="bgimg-5">
+		<img src="images/coral.png" id="coral" alt="coral" height="250px" width="350px">
+		<img src="images/coral1.png" id="coral1" alt="coral1" height="300px" width="350px">
 		
 		<div id="blueshark" class="more_info">
-      <img src="images/blueshark.png" id="blueshark"class="animalimage" alt="blueshark" height="200px" width="400">
-		  <a href="#" >more info</a>
+			<img src="images/blueshark.png" alt="blueshark" height="200px" width="auto">
+			<a href="#" >more info</a>
         </div>
         
         <div id="turtle" class="more_info">
-      <img src="images/turtle.png" id="turtle"class="animalimage" alt="blueshark" height="50px" width="100">
-		  <a href="#" >more info</a>
+			<img src="images/turtle.png" alt="turtle" height="120px" width="auto">
+			<a href="#" >more info</a>
         </div>
         
         <div id="fairypenguin" class="more_info">
-      <img src="images/fairypenguin.png" id="turtle"class="animalimage" alt="fairypenguin" height="100px" width="150">
-		  <a href="#" >more info</a>
+			<img src="images/penguin.png" alt="fairypenguin" height="100px" width="auto">
+			<a href="#" >more info</a>
         </div>
 	</div>
-	
-	
 
 	<footer class="clearfix">
 		&copy; Copyrighted Australian Wildlife 2016
