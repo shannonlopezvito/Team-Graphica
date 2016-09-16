@@ -123,14 +123,14 @@ h3 {
 
 #wombat{
 	position: absolute;
-	left: 80%;
-	top: 60%;
+	right:20%;
+	top: 30%;
 }
 
 #aardvark{
 	position: absolute;
-	left: 20%;
-	top: 30%;
+	left: 30%;
+	top: 40%;
 }
 
 /*habitat images*/

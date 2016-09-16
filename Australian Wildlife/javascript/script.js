@@ -17,6 +17,7 @@ animaldictionary["wallaby"] = "The Agile Wallaby is a medium sized wallaby. Ligh
 animaldictionary["shark"] = "Blue sharks are found in very deep waters. They prefer cooler water though so they are often found in sub tropical areas where it doesn’t get too warm.  It isn’t very often you will see one unless you are diving in the depths of the ocean. Most divers are well aware of what a blue shark looks like and strive to stay as far away from them as possible.";
 animaldictionary["turtle"] = "The Green Turtle has a small head and strong front flippers. It gets its name from the colour of its fat rather than the colour of its shell.";
 animaldictionary["fairypenguin"] = "The Fairy Penguin is the smallest species of penguin and the only one to breed in Australia. To keep them warm and dry, their feathers are oily due to oil glands in the penguins tail. Fairy penguins come ashore in groups to their burrows after dark when most predators are not around, returning to the sea before sunrise.";
+animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 36 kg. They have a large, blunt head and a short, neck. Their sharp claws and stubby, powerful legs make them great diggers. Wombats can live for up to 27 years in captivity. It digs burrows and tunnels in the ground for shelter and to escape from danger. Despite their slow appearance they can run quite fast.";
 
 $(document).ready(function(){	
 // Functions that be ran every time the browser was opened
