@@ -95,6 +95,23 @@ h3 {
 	top: 40%;
 }
 
+#coypu{
+	position: absolute;
+	left: 50%;
+	top: 70%;
+}
+
+#wombat{
+	position: absolute;
+	left: 80%;
+	top: 60%;
+}
+
+#aardvark{
+	position: absolute;
+	left: 20%;
+	top: 30%;
+}
 
 /*habitat images*/
 #cloud{
