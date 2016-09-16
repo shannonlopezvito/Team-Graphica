@@ -1,3 +1,4 @@
+//Global variable
 var apiKey = "laktuo6dkdd22o5m";
 var animalname = "";
 
@@ -5,12 +6,28 @@ var loadedImages = [];
 var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
 var found = 0;
 
+// A dictionary that stores all description of the animals
+var animaldictionary = {};
+animaldictionary["flyingfox"] = "The Grey-headed Flying-fox has dark brown body and grey head, Reddish collar round the neck. Thick leg fur down to ankle. Roosts in large camps in branches of large trees.";
+animaldictionary["kookaburra"] = "The Laughing Kookaburra is a stocky bird with large head and a short neck and blunt tail. Beak is fairly long and sturdy. The wings are brown with blue mottling, the back is brown and the tail reddish. The males have a patch of blue-green feathers in the center of the rump - this less noticeable on the females.";
+animaldictionary["numbat"] = "The Numbat is a red-brown marsupial with six or seven vertical white bars on the back. It has a black stripe along the head. The snout is pointed , and they have a small mouth and a long, sticky tongue . The long bushy tail resembles a bottlebrush.";
+animaldictionary["koala"] = "The Koala is a unique Australian marsupial, often incorrectly called a Koala Bear. The males are larger than females. Koalas from southern areas are about 30% larger than the Queensland koalas Koala's fur is thick soft. Ears have long white hairs on the tips. Koalas can live as long as 17 years, however life expectancy is usually less than 10 years due to disease, attacks by dogs, road kills. Koalas sleep for about 75% of the time, becoming active after sunset. During the night they can be heard growling at other koalas.";
+animaldictionary["tasmaniandevil"] = "The Tasmanian Devil is the largest surviving carnivorous marsupial in the world. It has a thick-set, squat build, with a relatively large, broad head and short, thick tail. The fur is mainly black, but white markings often occur on the rump and chest. Body size also varies greatly, depending on the diet and habitat. Adult males are usually larger than adult females. Large males weigh up to 12 kg, and stand about 30 cm high at the shoulder. " ;
+animaldictionary["wallaby"] = "The Agile Wallaby is a medium sized wallaby. Light sandy brown with paler underneath. Has pale cheek stripe and light stripe on thigh. The edges of ears are black. They live in small social groups and can often seen feeding out in the open in late afternoon.";
+animaldictionary["shark"] = "Blue sharks are found in very deep waters. They prefer cooler water though so they are often found in sub tropical areas where it doesn’t get too warm.  It isn’t very often you will see one unless you are diving in the depths of the ocean. Most divers are well aware of what a blue shark looks like and strive to stay as far away from them as possible.";
+animaldictionary["turtle"] = "The Green Turtle has a small head and strong front flippers. It gets its name from the colour of its fat rather than the colour of its shell.";
+animaldictionary["fairypenguin"] = "The Fairy Penguin is the smallest species of penguin and the only one to breed in Australia. To keep them warm and dry, their feathers are oily due to oil glands in the penguins tail. Fairy penguins come ashore in groups to their burrows after dark when most predators are not around, returning to the sea before sunrise.";
 
 $(document).ready(function(){	
+// Functions that be ran every time the browser was opened
+
+	//function for the hidden animal
 	var hidden_index =  $("#koala").css("z-index")
 	if (hidden_index == 0){
+		// if the animal is hidden, hide the more info text
 		$( "#hidden" ).hide();
 	}
+	// When the user clicks on the koala, show the image and the more info text
 	$("#koala").click(function(){
 		$("#koala").css({"z-index": 2});
 		$( "#hidden" ).show();
@@ -24,7 +41,7 @@ $(document).ready(function(){
 	// Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal
+	// When the user clicks the button, open the modal
 	$(".more_info").click(function(){
 		var habitat = $(this).parent();
 		var habitat_id = $(this).parent().attr('id');
@@ -33,21 +50,26 @@ $(document).ready(function(){
 		if (habitat_id=="grassland"){
 			$('.modal-content').css({"margin-left":"50%"});
 			$('.tab').css({"margin-left":"50%"});
+		} else{
+			$('.modal-content').css({"margin-right":"50%"});
+			$('.tab').css({"margin-right":"50%"});
 		}
 		modal.style.display = "block";
-		openCity(event, 'Description');
+		opentab(event, 'Description');
+		// Call three functions to get the content of the modal
 		getArticle();
 		getImage();
+		getDescription();
 	});
 
-// When the user clicks on <span> (x), close the modal
+	// When the user clicks on <span> (x), close the modal
 	span.onclick = function() {
 		modal.style.display = "none";
 		$("#Article").html("<h3>" + "Article" + "</h3>" + "<p>" + "loading..." +"</p>");
 		$("#Images").html("<h3>" + "Images" + "</h3>" + "<p>" + "loading..." +"</p>");
 	}
 
-// When the user clicks anywhere outside of the modal, close it
+	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
 		if (event.target == modal) {
 			modal.style.display = "none";
@@ -57,6 +79,28 @@ $(document).ready(function(){
 	}
 });
 
+// A function that open the tab content
+function opentab(evt, tabName) {
+	event.preventDefault();
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+		$(tablinks[i]).parent().css("background-color", "#ECECEC");
+    }  
+	// check if the modal just opened, highlight the default tab "description"
+	if (evt.currentTarget.id==animalname){
+		$(tablinks[0]).parent().css("background-color", "#ccc");
+	}
+	$(evt.currentTarget).parent().css("background-color", "#ccc");
+    document.getElementById(tabName).style.display = "block";
+}
+
+//Code snippets from (Source: Trove Ultra Basic Example Code from DECO1800/7180 Course Rescource)
+// Function that get a random article from Trove
 function getArticle(){
 // Get the values from our search form
 	var searchTerm = animalname;			  
@@ -70,7 +114,6 @@ function getArticle(){
 	console.log(url);
 			    	
 	$.getJSON(url, function(data) {
-		// clear the HTML div that will display the results
 		$.each(data.response.zone[0].records.article, function(index, value) {
 		count++
 	});
@@ -78,7 +121,7 @@ function getArticle(){
 	console.log(number);
 	$.each(data.response.zone[0].records.article, function(index, value) {
 		if (index==number){
-			$("#Article").html("<h3>" + "Article from Trove about " + animalname + "</h3>" + "<p>" + value.articleText +"</p>");
+			$("#Article").html("<h3>" + "Article" + "</h3>" + "<p>" + value.articleText +"</p>"+ "<p>"+ "<i>"+"Article from Trove"+"<i>"+"</p>");
 		}
 	});
 });
@@ -86,24 +129,7 @@ function getArticle(){
 	
 }
 
-function openCity(evt, cityName) {
-	event.preventDefault();
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-		$(tablinks[i]).parent().css("background-color", "#ECECEC");
-    }  
-	if (evt.currentTarget.id==animalname){
-		$(tablinks[0]).parent().css("background-color", "#ccc");
-	}
-	$(evt.currentTarget).parent().css("background-color", "#ccc");
-    document.getElementById(cityName).style.display = "block";
-}
-
+//Code snippets from (Source: Images & Trove from DECO1800/7180 Course Rescource)
 function waitForFlickr() {
 	if(found == loadedImages.length) {
 		printImages();
@@ -161,8 +187,8 @@ function processImages(index, troveItem) {
         loadedImages.push(
         imgUrl.slice(0, imgUrl.length - 3) + "jpg"
 	);     
-    } else { // Could not reliably load image for item
-		console.log("Not available: " + imgUrl);
+    } else { // Could not reliably load image for item, only for debug
+		//console.log("Not available: " + imgUrl);
     }
 }
 
@@ -199,6 +225,7 @@ function printImages() {
 				
 			$("#Images").html("<h3>" + "Images" + "</h3>" + "<p>" +"</p>");
 			$("#Images").append(image);
+			$("#Images").append("<p>"+ "<i>"+"Image from Trove"+"<i>"+"</p>");
 		}
     }
 }
@@ -214,6 +241,15 @@ function getQueryVariable(variable, url) {
         }
     }
     return (false);
+}
+
+// A function that gets the corresponding animal description
+function getDescription(){
+	for (var key in animaldictionary){
+		if (key==animalname){
+			$("#Description").html("<h3>" + "Description" + "</h3>" + "<p>" + animaldictionary[key] +"</p>" + "<p>"+ "<i>"+"Description from Ozanimal.com"+"<i>"+"</p>");
+		}
+	}
 }
 
 
