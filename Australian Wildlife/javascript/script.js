@@ -18,22 +18,33 @@ animaldictionary["shark"] = "Blue sharks are found in very deep waters. They pre
 animaldictionary["turtle"] = "The Green Turtle has a small head and strong front flippers. It gets its name from the colour of its fat rather than the colour of its shell.";
 animaldictionary["fairypenguin"] = "The Fairy Penguin is the smallest species of penguin and the only one to breed in Australia. To keep them warm and dry, their feathers are oily due to oil glands in the penguins tail. Fairy penguins come ashore in groups to their burrows after dark when most predators are not around, returning to the sea before sunrise.";
 animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 36 kg. They have a large, blunt head and a short, neck. Their sharp claws and stubby, powerful legs make them great diggers. Wombats can live for up to 27 years in captivity. It digs burrows and tunnels in the ground for shelter and to escape from danger. Despite their slow appearance they can run quite fast.";
+animaldictionary["palm_cockatoo"] = "The Palm Cockatoo is a large dark-grey cockatoo with large dark grey bill. It has orange-red facial skin patches. The crest is long and erect. The female is smaller with less red on face. Young ones have pale yellow margins on feathers of the underside, and paler bill.";
+animaldictionary["Gouldian_Finch"]="The Gouldian Finch is a beautiful finch with a bright green back, yellow belly and a purple breast. Most birds have a black face, but about 25% have red faces, and yellow-faced forms are rare. The males are brighter colours than the females. Juveniles are grey on the head and neck, and olive on the back and tail. The underparts are pale brownish white.";
+animaldictionary["Australian_Fur_Seal"]="The Australian Fur Seal is dark brown to brownish grey with mane of coarse hair. Pups black with silver. External ears visible.";
 
 $(document).ready(function(){	
 // Functions that be ran every time the browser was opened
 
 	//function for the hidden animal
-	var hidden_index =  $("#koala").css("z-index")
+	var hidden_index =  $(".hidden_an").css("z-index")
 	if (hidden_index == 0){
 		// if the animal is hidden, hide the more info text
-		$( "#hidden" ).hide();
+		$(".hidden").hide();
 	}
 	// When the user clicks on the koala, show the image and the more info text
-	$("#koala").click(function(){
-		$("#koala").css({"z-index": 2});
-		$( "#hidden" ).show();
+	$(".hidden_an").click(function(){
+		$(this).css({"z-index": 2});
+		$(this).children().show();
 	});
-
+	
+	//Code snippets from (Source: Highlight nav links when scrolling the page from blyk)
+	// A function that highlights a link, when the user's move enter a section
+	$(".bgimg").mouseenter(function(){
+		var id = $(this).attr('id')+"_link";
+		$(".link").removeClass('active');
+		$("#"+id).addClass('active');
+   });
+   
 
 	// Get the modal
 	var modal = document.getElementById('myModal');

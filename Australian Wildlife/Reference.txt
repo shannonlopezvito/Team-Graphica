@@ -1,0 +1,4 @@
+https://css-tricks.com/forums/topic/highlight-nav-links-when-scrolling-the-page/
+http://deco1800.uqcloud.net/examples/basicTroveSearch.html
+http://deco1800.uqcloud.net/examples/troveImage.php
+https://css-tricks.com/better-tabs-with-round-out-borders/

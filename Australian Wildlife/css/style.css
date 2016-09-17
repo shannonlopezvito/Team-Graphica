@@ -62,6 +62,7 @@ h3 {
 	position:absolute;
 	left:50%;
 	top:20%;
+	z-index: 2;
 }
 
 #kookaburra{
@@ -91,7 +92,6 @@ h3 {
 }
 
 #koala{ 
-    z-index: 0;
     position: absolute;
     left: 20%;
     top: 30%;
@@ -133,6 +133,28 @@ h3 {
 	top: 40%;
 }
 
+#palm_cockatoo{
+	position: absolute;
+	right: 10%;
+	top: 50%;
+}
+
+#Gouldian_Finch{
+	position: absolute;
+	right: 10%;
+	top: 20%;
+}
+
+#Australian_Fur_Seal{
+	position: absolute;
+	right: 8%;
+	bottom: 0%;
+}
+
+.hidden_an{
+	z-index: 0;
+}
+
 /*habitat images*/
 #cloud{
 	position: absolute;
@@ -141,9 +163,11 @@ h3 {
 }
 	
 #cloud1{
+	pointer-events: none;
+    z-index: 1;
 	position: absolute;
-	left:70%;
-	top:10%;
+	right:10%;
+	top:20%;
 }
 
 #tree{
@@ -185,7 +209,9 @@ h3 {
 }	
 	
 #coral1{
+	pointer-events: none;
 	position:absolute;
+	z-index: 1;
 	right:5%;
 	bottom:0%;
 }
@@ -196,10 +222,8 @@ h3 {
 	top:10%;
 }
 
-
-
 /*Style for habitat background*/
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+.bgimg {
 	position: relative;
 	background-size: cover;
 	background-position: center;
@@ -273,6 +297,10 @@ a:active,a:focus{
 	color:#ffffff;
 }
 
+.active{
+	font-weight: bold;
+}
+
 /*Style for footer*/
 footer{
 	color:white;
@@ -322,7 +350,7 @@ footer{
 }
 
 
-
+/*Code snippets from (Source: (Better) Tabs with Round Out Borders code by Chris Coyier)*/
 /* Style the tab content */
 .tabcontent {
     display: none;

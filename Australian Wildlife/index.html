@@ -13,17 +13,17 @@
 	<header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#sky">Sky</a></li>
-                <li><a href="#grassland">Grassland</a></li>
-                <li><a href="#underground">Underground</a></li>
-                <li><a href="#sea">Sea</a></li>
+                <li><a id="home_link" class="link" href="#home">Home</a></li>
+                <li><a id="sky_link" class="link" href="#sky">Sky</a></li>
+                <li><a id="grassland_link" class="link" href="#grassland">Grassland</a></li>
+                <li><a id="underground_link" class="link" href="#underground">Underground</a></li>
+                <li><a id="sea_link" class="link" href="#sea">Sea</a></li>
             </ul>
         </nav>
     </header>
 	
 	<a name ="home"></a>
-	<div name="home" class="bgimg-1">
+	<div id="home" name="home" class="bgimg bgimg-1">
 		<img src="images/boy.png" id="person" alt="person" height="220px" width="auto">
 		<div class="caption">
 			<h1>Australian Wildlife</h1>
@@ -39,7 +39,7 @@
 	</div>
 
 	<a name="sky"></a>
-	<div id="sky" class="bgimg-2">
+	<div id="sky" class="bgimg bgimg-2">
 		<div id="flyingfox" class="more_info">
 			<img src="images/fying fox.png" alt="flying fox" height="200px" width="200px">
 		    <a href="#" >more info</a>
@@ -47,6 +47,14 @@
 		<div id="kookaburra" class="more_info">
 			<img src="images/kookaburra.png" alt="kookaburra" height="100px" width="150px">
             <a href="#" >more info</a>
+		</div>
+		<div id="palm_cockatoo" class="more_info">
+			<img src="images/palm cockatoo.png" alt="palm cockatoo" height="200px" width="auto">
+            <a href="#" >more info</a>
+		</div>
+		<div id="Gouldian_Finch" class="more_info hidden_an">
+			<img src="images/Gouldian Finch.png"  alt="Gouldian Finch" height="130px" width="auto">
+            <a class ="hidden" href="#" >more info</a>
 		</div>
 		<img src="images/cloud.png" id="cloud" alt="cloud" height="200px" width="250px">
 		<img src="images/cloud1.png" id="cloud1" alt="cloud1" height="200px" width="350px">	
@@ -81,15 +89,15 @@
 	 </div>
 
 	<a name="grassland"></a>
-	<div id="grassland" class="bgimg-3">
+	<div id="grassland" class="bgimg bgimg-3">
 		<div id="numbat" class="more_info">
 			<img src="images/Numbat.png" alt="numbat" height="150px" width="auto">
 		    <a href="#" >more info</a>
 		</div>
 		<img src="images/tree.png" id="tree" alt="tree" height="500px" width="400px">
-		<div id="koala" class="more_info">
+		<div id="koala" class="more_info hidden_an">
 			<img src="images/koala.png" alt="koala" height="100px" width="auto">
-			<a id ="hidden" href="#" >more info</a>
+			<a class ="hidden" href="#" >more info</a>
 		</div>   
 		<div id="tasmaniandevil" class="more_info">
 			<img src="images/Tasmanian_Devil.png" alt="Tasmanian Devil"  height="150px" width="auto">
@@ -104,7 +112,7 @@
 	</div>
 	
 	<a name="underground"></a>
-	<div id="underground" class="bgimg-4">
+	<div id="underground" class="bgimg bgimg-4">
 		<img src="images/rock.png" id="rock" alt="rock" height="200px" width="300px">
 		<img src="images/rock1.png" id="rock1" alt="rock1" height="150px" width="250px">
 		
@@ -125,7 +133,7 @@
 	</div>
 
 	<a name="sea"></a>
-	<div id="sea" class="bgimg-5">
+	<div id="sea" class="bgimg bgimg-5">
 		<img src="images/coral.png" id="coral" alt="coral" height="250px" width="350px">
 		<img src="images/coral1.png" id="coral1" alt="coral1" height="300px" width="350px">
 		
@@ -142,6 +150,10 @@
 			<img src="images/penguin.png" alt="fairypenguin" height="100px" width="auto">
 			<a href="#" >more info</a>
         </div>
+		<div id="Australian_Fur_Seal" class="more_info hidden_an">
+			<img src="images/Australian Fur Seal.png"  alt="Australian Fur Seal" height="160px" width="auto">
+            <a class ="hidden" href="#" >more info</a>
+		</div>
 	</div>
 
 	<footer class="clearfix">
