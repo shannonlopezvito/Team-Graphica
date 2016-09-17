@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Single Page Site with Smooth Scrolling and Fixed Navigation</title>
+    
+    <meta name="description" content="In this lab, I'm going to demonstrate how to create a fixed navigation, single page site with smooth scrolling, and highlighting the navigation link depending on which section is currently being viewed. This technique is great for single page sites that want to pack in lots of goodies on one page, but use a navigation with cool scrolling to section it off." />
+    
+    <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
+  <style>
+  /* =The style for the lab
+-------------------------------------------------------------- */
+
+/* navigation */
+nav {
+    background-color: rgba(242,242,242, .2);
+	clear:both;
+	position:fixed;
+	display: inline-block;
+	vertical-align: middle;
+	width:100%;
+	height: 50px;
+	margin-top:0px;
+	z-index:100;
+}
+
+
+
+nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    color:rgb(50,50,50);
+    font-weight:700;
+}
+
+a.nav-active {
+    color:#ccc;
+}
+
+  </style>
+  
+    
+    <script src="js/jquery-1.9.1.min.js"></script>
+    
+    
+</head>
+
+
+
+<body>
+
+
+
+
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+       
+        
+        
+
+            
+            
+        
+            <section id="home">
+             <img src="images/about.jpg" width=1300px height=780px>
+            </section>
+            </section>
+            
+            <section id="about">
+            <img src="images/about.jpg" width=1300px height=780px>
+            </section>
+                
+            <section id="services">
+               <img src="images/grass.jpg" width=1300px height=780px>
+            </section>
+        
+        
+            <section id="blog">
+                <img src="images/grass.jpg" width=1300px height=780px>
+            </section>
+        
+        
+            <section id="contact">
+                <img src="images/ground.jpg" width=1300px height=780px>
+            </section>
+    
+<script>
+    
+
+        
+    $(document).ready(function(){
+        
+        /** 
+         * This part does the "fixed navigation after scroll" functionality
+         * We use the jQuery function scroll() to recalculate our variables as the 
+         * page is scrolled/
+         */
+        
+        
+        
+        /**
+         * This part causes smooth scrolling using scrollto.js
+         * We target all a tags inside the nav, and apply the scrollto.js to it.
+         */
+        $("nav a").click(function(evn){
+            evn.preventDefault();
+            $('html,body').scrollTo(this.hash, this.hash); 
+        });
+        
+        
+        
+        /**
+         * This part handles the highlighting functionality.
+         * We use the scroll functionality again, some array creation and 
+         * manipulation, class adding and class removing, and conditional testing
+         */
+        var aChildren = $("nav li").children(); // find the a children of the list items
+        var aArray = []; // create the empty aArray
+        for (var i=0; i < aChildren.length; i++) {    
+            var aChild = aChildren[i];
+            var ahref = $(aChild).attr('href');
+            aArray.push(ahref);
+        } // this for loop fills the aArray with attribute href values
+        
+        $(window).scroll(function(){
+            var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
+            var windowHeight = $(window).height(); // get the height of the window
+            var docHeight = $(document).height();
+            
+            for (var i=0; i < aArray.length; i++) {
+                var theID = aArray[i];
+                var divPos = $(theID).offset().top; // get the offset of the div from the top of page
+                var divHeight = $(theID).height(); // get the height of the div in question
+                if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+                    $("a[href='" + theID + "']").addClass("nav-active");
+                } else {
+                    $("a[href='" + theID + "']").removeClass("nav-active");
+                }
+            }
+            
+            
+        });
+    });
+
+</script>
+
+
+
+
+</body>
+</html>
