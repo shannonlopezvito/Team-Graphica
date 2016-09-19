@@ -61,9 +61,14 @@ $(document).ready(function(){
 		habitat.append(modal);
 		animalname = $(this).attr('id');
 		if (habitat_id=="grassland"){
+			// reset the margin style
+			$('.modal-content').css({"margin-right":""});
+			$('.tab').css({"margin-right":""});
 			$('.modal-content').css({"margin-left":"50%"});
 			$('.tab').css({"margin-left":"50%"});
 		} else{
+			$('.modal-content').css({"margin-left":""});
+			$('.tab').css({"margin-left":""});
 			$('.modal-content').css({"margin-right":"50%"});
 			$('.tab').css({"margin-right":"50%"});
 		}
