@@ -21,7 +21,8 @@ animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 3
 animaldictionary["palm_cockatoo"] = "The Palm Cockatoo is a large dark-grey cockatoo with large dark grey bill. It has orange-red facial skin patches. The crest is long and erect. The female is smaller with less red on face. Young ones have pale yellow margins on feathers of the underside, and paler bill.";
 animaldictionary["Gouldian_Finch"]="The Gouldian Finch is a beautiful finch with a bright green back, yellow belly and a purple breast. Most birds have a black face, but about 25% have red faces, and yellow-faced forms are rare. The males are brighter colours than the females. Juveniles are grey on the head and neck, and olive on the back and tail. The underparts are pale brownish white.";
 animaldictionary["Australian_Fur_Seal"]="The Australian Fur Seal is dark brown to brownish grey with mane of coarse hair. Pups black with silver. External ears visible.";
-
+animaldictionary["aardvark"] ="The aardvark is a medium-sized, burrowing, nocturnal mammal native to Africa. It is the only living species of the order Tubulidentata, although other prehistoric species and genera of Tubulidentata are known."
+animaldictionary["coypu"] ="The coypu, also known as the river rat or nutria, is a large, herbivorous, semiaquatic rodent and the only member of the family Myocastoridae.";
 $(document).ready(function(){	
 // Functions that be ran every time the browser was opened
 
