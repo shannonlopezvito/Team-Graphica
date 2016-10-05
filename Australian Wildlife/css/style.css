@@ -278,6 +278,12 @@ ul{
 	text-align:center;
 }
 
+/*Refresh button*/
+#refresh {
+    float: right;  
+}
+
+
 /*Style for links*/
 a,a:link{
 	text-decoration:none;
