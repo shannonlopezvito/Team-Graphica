@@ -281,6 +281,14 @@ ul{
 /*Refresh button*/
 #refresh {
     float: right;  
+	margin-right:10px;
+	margin-top:5px;
+	 background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
 }
 
 
