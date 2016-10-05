@@ -270,4 +270,8 @@ function getDescription(){
 	}
 }
 
+//Refresh Button
+function myFunction() {
+    location.reload();
+}
 
