@@ -12,6 +12,7 @@ var animaldictionary = {};
 animaldictionary["koala"] = "The Koala is a unique Australian marsupial, often incorrectly called a Koala Bear. The males are larger than females. Koalas from southern areas are about 30% larger than the Queensland koalas Koala's fur is thick soft. Ears have long white hairs on the tips. Koalas can live as long as 17 years, however life expectancy is usually less than 10 years due to disease, attacks by dogs, road kills. Koalas sleep for about 75% of the time, becoming active after sunset. During the night they can be heard growling at other koalas.";
 animaldictionary["Gouldian_Finch"]="The Gouldian Finch is a beautiful finch with a bright green back, yellow belly and a purple breast. Most birds have a black face, but about 25% have red faces, and yellow-faced forms are rare. The males are brighter colours than the females. Juveniles are grey on the head and neck, and olive on the back and tail. The underparts are pale brownish white.";
 animaldictionary["Australian_Fur_Seal"]="The Australian Fur Seal is dark brown to brownish grey with mane of coarse hair. Pups black with silver. External ears visible.";
+var click=4;
 $(document).ready(function(){	
 // Functions that be ran every time the browser was opened
 	
@@ -25,8 +26,12 @@ $(document).ready(function(){
 	}
 	// When the user clicks on the koala, show the image and the more info text
 	$(".hidden_an").click(function(){
+		if ($(this).css("z-index")<2){
+		click-=1;
+		}
 		$(this).css({"z-index": 2});
 		$(this).children().show();
+		
 	});
 	
 	//Code snippets from (Source: Highlight nav links when scrolling the page from blyk)
