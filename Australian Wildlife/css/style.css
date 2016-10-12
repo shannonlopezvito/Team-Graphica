@@ -38,10 +38,6 @@ h3 {
 	color: #000;
 }
 
-/*Style for the "scroll down" button*/
-.btn {
-    
-}
 
 /*Style for animal images*/
 #sky_1{
@@ -280,6 +276,31 @@ ul{
     cursor:pointer;
     overflow: hidden;
     outline:none;
+}
+
+#refresh p {
+	z-index:2;
+	color: black;
+	display: initial;
+	position: absolute;
+	left:90%;
+	top:130px;
+	opacity: 0;
+	text-align: center;
+	-webkit-transition: opacity 500ms;
+	-moz-transition: opacity 500ms;
+	-o-transition: opacity 500ms;
+	transition: opacity 500ms;
+	text-shadow:
+	-1px -1px 0 white,  
+	1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+	font-size: 18px;
+}
+
+#refresh:hover p {
+	opacity: 1;
 }
 
 
