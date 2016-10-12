@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="javascript/script.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <title>Australian Wildlife</title>
 </head>
 
@@ -19,7 +20,7 @@
                 <li><a id="underground_link" class="link" href="#underground">Underground</a></li>
                 <li><a id="sea_link" class="link" href="#sea">Sea</a></li>
             </ul>
-            <button onclick="myFunction()" id="refresh"><img src="images/refreshbutton.png" alt="Refresh" height="80px" width="80px"></button>
+            <button onclick="refresh()" id="refresh"><img src="images/refreshbutton.png" alt="Refresh" height="80px" width="80px"></button>
         </nav>
     </header>
 	
@@ -41,24 +42,24 @@
 
 	<a name="sky"></a>
 	<div id="sky" class="bgimg bgimg-2">
-		<div id="flyingfox" class="more_info">
-			<img src="images/fying fox.png" alt="flying fox" height="200px" width="200px">
+		<div id="sky_1" class="more_info">
+			<img src="images/fying fox.png" id="flying fox" alt="flying fox" height="200px" width="auto">
 		    <a href="#" >more info</a>
 		</div>
-		<div id="kookaburra" class="more_info">
-			<img src="images/kookaburra.png" alt="kookaburra" height="100px" width="150px">
+		<div id="sky_2" class="more_info">
+			<img src="images/kookaburra.png" id="kookaburra" alt="kookaburra" height="100px" width="auto">
             <a href="#" >more info</a>
 		</div>
-		<div id="palm_cockatoo" class="more_info">
-			<img src="images/palm cockatoo.png" alt="palm cockatoo" height="200px" width="auto">
+		<div id="sky_3" class="more_info">
+			<img src="images/palm cockatoo.png" id="palm cockatoo" alt="palm cockatoo" height="200px" width="auto">
             <a href="#" >more info</a>
 		</div>
 		<div id="Gouldian_Finch" class="more_info hidden_an">
-			<img src="images/Gouldian Finch.png"  alt="Gouldian Finch" height="130px" width="auto">
+			<img src="images/Gouldian Finch.png"  id="Gouldian Finch" alt="Gouldian Finch" height="130px" width="auto">
             <a class ="hidden" href="#" >more info</a>
 		</div>
-		<img src="images/cloud.png" id="cloud" alt="cloud" height="200px" width="250px">
-		<img src="images/cloud1.png" id="cloud1" alt="cloud1" height="200px" width="350px">	
+		<img src="images/cloud.png" id="cloud" alt="cloud" height="200px" width="auto">
+		<img src="images/cloud1.png" id="cloud1" alt="cloud1" height="200px" width="auto">	
 		
 		<!--Code snippets from (Source: W3.CSS Modal Code from W3school)-->
 		<!-- The Modal -->
@@ -91,68 +92,68 @@
 
 	<a name="grassland"></a>
 	<div id="grassland" class="bgimg bgimg-3">
-		<div id="numbat" class="more_info">
-			<img src="images/Numbat.png" alt="numbat" height="150px" width="auto">
+		<div id="grassland_1" class="more_info">
+			<img src="images/Numbat.png" id="numbat" alt="numbat" height="150px" width="auto">
 		    <a href="#" >more info</a>
 		</div>
-		<img src="images/tree.png" id="tree" alt="tree" height="500px" width="400px">
+		<img src="images/tree.png" id="tree" alt="tree" height="500px" width="auto">
 		<div id="koala" class="more_info hidden_an">
-			<img src="images/koala.png" alt="koala" height="100px" width="auto">
+			<img src="images/koala.png" id="koala" alt="koala" height="100px" width="auto">
 			<a class ="hidden" href="#" >more info</a>
 		</div>   
-		<div id="tasmaniandevil" class="more_info">
-			<img src="images/Tasmanian_Devil.png" alt="Tasmanian Devil"  height="150px" width="auto">
+		<div id="grassland_2" class="more_info">
+			<img src="images/Tasmanian_Devil.png" id="Tasmanian Devil" alt="Tasmanian Devil"  height="150px" width="auto">
 			<a href="#" >more info</a>
         </div>
-        <div id="wallaby" class="more_info">
-			<img src="images/Wallaby.png" alt="Wallaby" height="220px" width="auto">
+        <div id="grassland_3" class="more_info">
+			<img src="images/Wallaby.png" id="Wallaby" alt="Wallaby" height="220px" width="auto">
 			<a href="#" >more info</a>
         </div>
 		<img src="images/bush.png" id="bush" alt="bush" height="200px" width="auto">
-		<img src="images/bush1.png" id="bush1" alt="bush1" height="200px" width="300">	
+		<img src="images/bush1.png" id="bush1" alt="bush1" height="200px" width="auto">	
 	</div>
 	
 	<a name="underground"></a>
 	<div id="underground" class="bgimg bgimg-4">
-		<img src="images/rock.png" id="rock" alt="rock" height="200px" width="300px">
-		<img src="images/rock1.png" id="rock1" alt="rock1" height="150px" width="250px">
+		<img src="images/rock.png" id="rock" alt="rock" height="200px" width="auto">
+		<img src="images/rock1.png" id="rock1" alt="rock1" height="150px" width="auto">
 		
-		<div id="wombat" class="more_info">
-			<img src="images/wombat.png" alt="koala" height="150px" width="auto">
+		<div id="underground_1" class="more_info">
+			<img src="images/wombat.png" id="wombat" alt="wombat" height="150px" width="auto">
 			<a href="#" >more info</a>
 		</div>  
 		
-		<div id="bilby" class="more_info">
-			<img src="images/bilby.png" alt="bilby" height="100px" width="auto">
+		<div id="underground_2" class="more_info">
+			<img src="images/bilby.png" id="bilby" alt="bilby" height="100px" width="auto">
 			<a href="#" >more info</a>
 		</div>  
 		
-		<div id="echidna" class="more_info">
-			<img src="images/echidna.png" alt="echidna" height="125px" width="auto">
+		<div id="underground_3" class="more_info">
+			<img src="images/echidna.png" id="echidna" alt="echidna" height="125px" width="auto">
 			<a href="#" >more info</a>
 		</div>  
 	</div>
 
 	<a name="sea"></a>
 	<div id="sea" class="bgimg bgimg-5">
-		<img src="images/coral.png" id="coral" alt="coral" height="250px" width="350px">
-		<img src="images/coral1.png" id="coral1" alt="coral1" height="300px" width="350px">
+		<img src="images/coral.png" id="coral" alt="coral" height="250px" width="auto">
+		<img src="images/coral1.png" id="coral1" alt="coral1" height="300px" width="auto">
 		
-		<div id="shark" class="more_info">
-			<img src="images/blueshark.png" alt="blueshark" height="200px" width="auto">
+		<div id="sea_1" class="more_info">
+			<img src="images/blueshark.png"  id="blueshark"  alt="blueshark" height="200px" width="auto">
 			<a href="#" >more info</a>
         </div>
         
-        <div id="turtle" class="more_info">
-			<img src="images/Turtle.png" alt="turtle" height="120px" width="auto">
+        <div id="sea_2" class="more_info">
+			<img src="images/Turtle.png" id="turtle" alt="turtle" height="120px" width="auto">
 			<a href="#" >more info</a>
         </div>
-        <div id="fairypenguin" class="more_info">
-			<img src="images/penguin.png" alt="fairypenguin" height="100px" width="auto">
+        <div id="sea_3" class="more_info">
+			<img src="images/penguin.png" id="fairypenguin" alt="fairypenguin" height="100px" width="auto">
 			<a href="#" >more info</a>
         </div>
 		<div id="Australian_Fur_Seal" class="more_info hidden_an">
-			<img src="images/Australian Fur Seal.png"  alt="Australian Fur Seal" height="160px" width="auto">
+			<img src="images/Australian Fur Seal.png"  id="Australian Fur Seal" alt="Australian Fur Seal" height="160px" width="auto">
             <a class ="hidden" href="#" >more info</a>
 		</div>
 	</div>

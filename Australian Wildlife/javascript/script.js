@@ -6,26 +6,17 @@ var loadedImages = [];
 var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
 var found = 0;
 
+var existing_animal=[];
 // A dictionary that stores all description of the animals
 var animaldictionary = {};
-animaldictionary["flyingfox"] = "The Grey-headed Flying-fox has dark brown body and grey head, Reddish collar round the neck. Thick leg fur down to ankle. Roosts in large camps in branches of large trees.";
-animaldictionary["kookaburra"] = "The Laughing Kookaburra is a stocky bird with large head and a short neck and blunt tail. Beak is fairly long and sturdy. The wings are brown with blue mottling, the back is brown and the tail reddish. The males have a patch of blue-green feathers in the center of the rump - this less noticeable on the females.";
-animaldictionary["numbat"] = "The Numbat is a red-brown marsupial with six or seven vertical white bars on the back. It has a black stripe along the head. The snout is pointed , and they have a small mouth and a long, sticky tongue . The long bushy tail resembles a bottlebrush.";
 animaldictionary["koala"] = "The Koala is a unique Australian marsupial, often incorrectly called a Koala Bear. The males are larger than females. Koalas from southern areas are about 30% larger than the Queensland koalas Koala's fur is thick soft. Ears have long white hairs on the tips. Koalas can live as long as 17 years, however life expectancy is usually less than 10 years due to disease, attacks by dogs, road kills. Koalas sleep for about 75% of the time, becoming active after sunset. During the night they can be heard growling at other koalas.";
-animaldictionary["tasmaniandevil"] = "The Tasmanian Devil is the largest surviving carnivorous marsupial in the world. It has a thick-set, squat build, with a relatively large, broad head and short, thick tail. The fur is mainly black, but white markings often occur on the rump and chest. Body size also varies greatly, depending on the diet and habitat. Adult males are usually larger than adult females. Large males weigh up to 12 kg, and stand about 30 cm high at the shoulder. " ;
-animaldictionary["wallaby"] = "The Agile Wallaby is a medium sized wallaby. Light sandy brown with paler underneath. Has pale cheek stripe and light stripe on thigh. The edges of ears are black. They live in small social groups and can often seen feeding out in the open in late afternoon.";
-animaldictionary["shark"] = "Blue sharks are found in very deep waters. They prefer cooler water though so they are often found in sub tropical areas where it doesn’t get too warm.  It isn’t very often you will see one unless you are diving in the depths of the ocean. Most divers are well aware of what a blue shark looks like and strive to stay as far away from them as possible.";
-animaldictionary["turtle"] = "The Green Turtle has a small head and strong front flippers. It gets its name from the colour of its fat rather than the colour of its shell.";
-animaldictionary["fairypenguin"] = "The Fairy Penguin is the smallest species of penguin and the only one to breed in Australia. To keep them warm and dry, their feathers are oily due to oil glands in the penguins tail. Fairy penguins come ashore in groups to their burrows after dark when most predators are not around, returning to the sea before sunrise.";
-animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 36 kg. They have a large, blunt head and a short, neck. Their sharp claws and stubby, powerful legs make them great diggers. Wombats can live for up to 27 years in captivity. It digs burrows and tunnels in the ground for shelter and to escape from danger. Despite their slow appearance they can run quite fast.";
-animaldictionary["palm_cockatoo"] = "The Palm Cockatoo is a large dark-grey cockatoo with large dark grey bill. It has orange-red facial skin patches. The crest is long and erect. The female is smaller with less red on face. Young ones have pale yellow margins on feathers of the underside, and paler bill.";
 animaldictionary["Gouldian_Finch"]="The Gouldian Finch is a beautiful finch with a bright green back, yellow belly and a purple breast. Most birds have a black face, but about 25% have red faces, and yellow-faced forms are rare. The males are brighter colours than the females. Juveniles are grey on the head and neck, and olive on the back and tail. The underparts are pale brownish white.";
 animaldictionary["Australian_Fur_Seal"]="The Australian Fur Seal is dark brown to brownish grey with mane of coarse hair. Pups black with silver. External ears visible.";
-animaldictionary["bilby"] ="The Bilby has long rabbit-like ears and pointed nose. The fur is silvery blue. It has a longish black and white tail. It has strong claws for digging."
-animaldictionary["echidna"] ="The Short-beaked Echidna has a long sticky tongue for catching ants and other insects. It is a monotreme - that means it lays eggs. The prickly coat gives it protection - much like a hedgehog or porcupine. Has strong claws for digging and tearing termite mounds apart. Males have spur on ankle These are not venomous (unlike the Platypus spurs which are venomous).";
 $(document).ready(function(){	
 // Functions that be ran every time the browser was opened
-
+	
+	updataDisplay();
+	
 	//function for the hidden animal
 	var hidden_index =  $(".hidden_an").css("z-index")
 	if (hidden_index == 0){
@@ -59,7 +50,7 @@ $(document).ready(function(){
 		var habitat = $(this).parent();
 		var habitat_id = $(this).parent().attr('id');
 		habitat.append(modal);
-		animalname = $(this).attr('id');
+		animalname = $(this).find('img').attr('id');
 		if (habitat_id=="grassland"){
 			// reset the margin style
 			$('.modal-content').css({"margin-right":""});
@@ -97,6 +88,105 @@ $(document).ready(function(){
 	}
 });
 
+function updataDisplay() {
+	for (i = 1; i <= 3; i++) {
+		getphp_s(i);
+		getphp_g(i);
+		getphp_u(i);
+		getphp_se(i);
+	}
+}
+
+function getphp_s(i){
+	$.post("postData.php", { action: 0 }, function(ajaxresult){
+			var div_name="#sky_"+i;
+			var data=ajaxresult.split(":");
+			var id = data[0], 
+			name = data[1],
+			image = data[2];
+			height = data[3];
+			description = data[4];
+		if ($.inArray(name, existing_animal)==-1){
+			existing_animal.push(name);	
+			//alert(name);
+			$(div_name).find('img').attr('src',image);
+			$(div_name).find('img').height(height);
+			$(div_name).find('img').attr('alt',name);
+			$(div_name).find('img').attr("id",name);
+			animaldictionary[name] = description;
+		} else{
+			getphp_s(i);
+		}
+		});
+}
+
+function getphp_g(i){
+	$.post("postData.php", { action: 1 }, function(ajaxresult){
+			var div_name="#grassland_"+i;
+			var data=ajaxresult.split(":");
+			var id = data[0], 
+			name = data[1],
+			image = data[2];
+			height = data[3];
+			description = data[4];
+		if ($.inArray(name, existing_animal)==-1){
+			existing_animal.push(name);	
+			//alert(name);
+			$(div_name).find('img').attr('src',image);
+			$(div_name).find('img').height(height);
+			$(div_name).find('img').attr('alt',name);
+			$(div_name).find('img').attr("id",name);
+			animaldictionary[name] = description;
+		} else{
+			getphp_g(i);
+		}
+		});
+}
+
+function getphp_u(i){
+	$.post("postData.php", { action: 2 }, function(ajaxresult){	
+			var div_name="#underground_"+i;
+			var data=ajaxresult.split(":");
+			var id = data[0], 
+			name = data[1],
+			image = data[2];
+			height = data[3];
+			description = data[4];
+		if ($.inArray(name, existing_animal)==-1){
+			existing_animal.push(name);	
+			$(div_name).find('img').attr('src',image);
+			$(div_name).find('img').height(height);
+			$(div_name).find('img').attr('alt',name);
+			$(div_name).find('img').attr("id",name);
+			animaldictionary[name] = description;
+		} else{
+			getphp_u(i);
+		}
+		});
+}
+
+function getphp_se(i){
+	$.post("postData.php", { action: 3 }, function(ajaxresult){	
+			var div_name="#sea_"+i;
+			var data=ajaxresult.split(":");
+			var id = data[0], 
+			name = data[1],
+			image = data[2];
+			height = data[3];
+			description = data[4];
+		if ($.inArray(name, existing_animal)==-1){
+			existing_animal.push(name);	
+			$(div_name).find('img').attr('src',image);
+			$(div_name).find('img').height(height);
+			$(div_name).find('img').attr('alt',name);
+			$(div_name).find('img').attr("id",name);
+			animaldictionary[name] = description;
+		} else{
+			getphp_se(i);
+		}
+		});
+}
+			
 // A function that open the tab content
 function opentab(evt, tabName) {
 	event.preventDefault();
@@ -267,11 +357,11 @@ function getDescription(){
 		if (key==animalname){
 			$("#Description").html("<h3>" + "Description" + "</h3>" + "<p>" + animaldictionary[key] +"</p>" + "<p>"+ "<i>"+"Description from Ozanimal.com"+"<i>"+"</p>");
 		}
-	}
+}
 }
 
 //Refresh Button
-function myFunction() {
+function refresh() {
     location.reload();
 }
 

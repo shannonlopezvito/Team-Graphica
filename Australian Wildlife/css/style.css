@@ -58,37 +58,37 @@ h3 {
 }
 
 /*Style for animal images*/
-#flyingfox{
+#sky_1{
 	position:absolute;
 	left:50%;
 	top:20%;
 	z-index: 2;
 }
 
-#kookaburra{
+#sky_2{
 	position:absolute;
 	left:20%;
 	top:70%;
 }
 
-#numbat{
+#grassland_1{
     position:absolute;
 	right:15%;
     top:70%;
 	z-index:1;
 }
 
-#tasmaniandevil{
+#grassland_2{
     position:absolute;
     left:10%;
     top:60%;
 	z-index:2;
 }
 
-#wallaby{
+#grassland_3{
     position:absolute;
     left:45%;
-    top:40%;
+    top:45%;
 }
 
 #koala{ 
@@ -97,43 +97,43 @@ h3 {
     top: 30%;
 }
 
-#shark{
+#sea_1{
 	position: absolute;
 	left: 10%;
 	top: 50%;
 }
 
-#turtle{
+#sea_2{
 	position: absolute;
 	left: 50%;
 	top: 20%;
 }
 	
-#fairypenguin{
+#sea_3{
 	position: absolute;
-	left: 80%;
+	right: 10%;
 	top: 40%;
 }
 
-#echidna{
+#underground_3{
 	position: absolute;
 	left: 50%;
 	top: 70%;
 }
 
-#wombat{
+#underground_1{
 	position: absolute;
 	right:20%;
 	top: 30%;
 }
 
-#bilby{
+#underground_2{
 	position: absolute;
 	left: 30%;
 	top: 50%;
 }
 
-#palm_cockatoo{
+#sky_3{
 	position: absolute;
 	right: 10%;
 	top: 50%;
