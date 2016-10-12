@@ -262,6 +262,8 @@ ul{
 
 /*Refresh button*/
 #counter {
+	margin:15px;
+	position:fixed;
     float: left;
     color: white;
 }
@@ -278,7 +280,7 @@ ul{
     outline:none;
 }
 
-#refresh p {
+#div_refresh p {
 	z-index:2;
 	color: black;
 	display: initial;
@@ -299,7 +301,7 @@ ul{
 	font-size: 18px;
 }
 
-#refresh:hover p {
+#div_refresh:hover p {
 	opacity: 1;
 }
 
@@ -458,6 +460,10 @@ ul.tab li:hover {
     transform: scale(1.2);
 }
 
+#scroll{
+	position: relative;
+	margin-top:90px;
+}
 
 
 

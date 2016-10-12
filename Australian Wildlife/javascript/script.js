@@ -15,8 +15,30 @@ animaldictionary["Australian_Fur_Seal"]="The Australian Fur Seal is dark brown t
 var click=4;
 $(document).ready(function(){	
 // Functions that be ran every time the browser was opened
+	$.ajax({
+		url: 'postData.php',
+		success: function(){
+		updataDisplay();
+	},
+	error: function(){
+		animaldictionary["flying fox"] = "The Grey-headed Flying-fox has dark brown body and grey head, Reddish collar round the neck. Thick leg fur down to ankle. Roosts in large camps in branches of large trees.";
+		animaldictionary["kookaburra"] = "The Laughing Kookaburra is a stocky bird with large head and a short neck and blunt tail. Beak is fairly long and sturdy. The wings are brown with blue mottling, the back is brown and the tail reddish. The males have a patch of blue-green feathers in the center of the rump - this less noticeable on the females.";
+		animaldictionary["numbat"] = "The Numbat is a red-brown marsupial with six or seven vertical white bars on the back. It has a black stripe along the head. The snout is pointed , and they have a small mouth and a long, sticky tongue . The long bushy tail resembles a bottlebrush.";
+		animaldictionary["Tasmanian Devil"] = "The Tasmanian Devil is the largest surviving carnivorous marsupial in the world. It has a thick-set, squat build, with a relatively large, broad head and short, thick tail. The fur is mainly black, but white markings often occur on the rump and chest. Body size also varies greatly, depending on the diet and habitat. Adult males are usually larger than adult females. Large males weigh up to 12 kg, and stand about 30 cm high at the shoulder. " ;
+		animaldictionary["Wallaby"] = "The Agile Wallaby is a medium sized wallaby. Light sandy brown with paler underneath. Has pale cheek stripe and light stripe on thigh. The edges of ears are black. They live in small social groups and can often seen feeding out in the open in late afternoon.";
+		animaldictionary["blueshark"] = "Blue sharks are found in very deep waters. They prefer cooler water though so they are often found in sub tropical areas where it doesn’t get too warm.  It isn’t very often you will see one unless you are diving in the depths of the ocean. Most divers are well aware of what a blue shark looks like and strive to stay as far away from them as possible.";
+		animaldictionary["turtle"] = "The Green Turtle has a small head and strong front flippers. It gets its name from the colour of its fat rather than the colour of its shell.";
+		animaldictionary["fairypenguin"] = "The Fairy Penguin is the smallest species of penguin and the only one to breed in Australia. To keep them warm and dry, their feathers are oily due to oil glands in the penguins tail. Fairy penguins come ashore in groups to their burrows after dark when most predators are not around, returning to the sea before sunrise."; 
+		animaldictionary["palm cockatoo"] = "The Palm Cockatoo is a large dark-grey cockatoo with large dark grey bill. It has orange-red facial skin patches. The crest is long and erect. The female is smaller with less red on face. Young ones have pale yellow margins on feathers of the underside, and paler bill.";
+		animaldictionary["bilby"] ="The Bilby has long rabbit-like ears and pointed nose. The fur is silvery blue. It has a longish black and white tail. It has strong claws for digging."
+		animaldictionary["echidna"] ="The Short-beaked Echidna has a long sticky tongue for catching ants and other insects. It is a monotreme - that means it lays eggs. The prickly coat gives it protection - much like a hedgehog or porcupine. Has strong claws for digging and tearing termite mounds apart. Males have spur on ankle These are not venomous (unlike the Platypus spurs which are venomous).";
+		animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 36 kg. They have a large, blunt head and a short, neck. Their sharp claws and stubby, powerful legs make them great diggers. Wombats can live for up to 27 years in captivity. It digs burrows and tunnels in the ground for shelter and to escape from danger. Despite their slow appearance they can run quite fast.";
+	}
+	});
+
 	
-	updataDisplay();
+	
+	//updataDisplay();
 	
 	//function for the hidden animal
 	var hidden_index =  $(".hidden_an").css("z-index")
@@ -28,7 +50,7 @@ $(document).ready(function(){
 	$(".hidden_an").click(function(){
 		if ($(this).css("z-index")<2){
 		click-=1;
-		$("#counter").html("Hidden animal: "+click);
+		$("#counter").html("Number of hidden animals left to find: "+click);
 		alert("Cheers! You found a hidden animal!")
 		}
 		$(this).css({"z-index": 2});

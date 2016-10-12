@@ -13,16 +13,16 @@
 <body>
 	<header>
         <nav>
-            <ul>
-                <li id="counter">Hidden animals: 4</li>
+		<div id="counter">Number of hidden animals left to find: 4</div>
+            <ul> 
                 <li><a id="home_link" class="link" href="#home">Home</a></li>
                 <li><a id="sky_link" class="link" href="#sky">Sky</a></li>
                 <li><a id="grassland_link" class="link" href="#grassland">Grassland</a></li>
                 <li><a id="underground_link" class="link" href="#underground">Underground</a></li>
                 <li><a id="sea_link" class="link" href="#sea">Sea</a></li>
             </ul>
-            <div id="refresh">
-                <button onclick="refresh()"><img src="images/refreshbutton.png" alt="Refresh" height="80px" width="80px"></button>
+            <div id="div_refresh">
+                <button id="refresh" onclick="refresh()"><img src="images/refreshbutton.png" alt="Refresh" height="80px" width="80px"></button>
                 <p>Change animals</P>
             </div>
         </nav>
@@ -37,9 +37,7 @@
 				<p id="description">This is an interactive and educational website, where you can explore through a variety of different Australia native animals by scrolling through different habitat sections. </p>
 			</div>
 			<a href="#sky">
-			<div class="btn">
-				<img src="images/scrolldown.gif" width="400px" height="150px">
-			</div>
+				<img src="images/scrolldown.gif" id="scroll" alt="scroll down" width="200px" height="auto">
 			</a>
 		</div>
 	</div>
