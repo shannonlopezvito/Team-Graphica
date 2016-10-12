@@ -279,11 +279,16 @@ ul{
 }
 
 /*Refresh button*/
+#counter {
+    float: left;
+    color: white;
+}
+
 #refresh {
     float: right;  
 	margin-right:10px;
 	margin-top:5px;
-	 background-color: Transparent;
+	background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
@@ -329,7 +334,7 @@ footer{
 .modal {
     display: none; /* Hidden by default */
     position: absolute; 
-    z-index: 2; 
+    z-index: 100; 
     padding-top: 55px; 
     left: 0;
     top: 0;

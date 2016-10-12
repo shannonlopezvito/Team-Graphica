@@ -28,6 +28,7 @@ $(document).ready(function(){
 	$(".hidden_an").click(function(){
 		if ($(this).css("z-index")<2){
 		click-=1;
+		$("#counter").html("Hidden animal: "+click);
 		}
 		$(this).css({"z-index": 2});
 		$(this).children().show();
