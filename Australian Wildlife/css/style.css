@@ -56,14 +56,14 @@ h3 {
 #grassland_1{
     position:absolute;
 	right:15%;
-    top:70%;
-	z-index:1;
+    bottom:30%;
+	z-index:0;
 }
 
 #grassland_2{
     position:absolute;
     left:10%;
-    top:60%;
+    bottom:5%;
 	z-index:2;
 }
 
@@ -71,6 +71,7 @@ h3 {
     position:absolute;
     left:45%;
     top:45%;
+	z-index:1;
 }
 
 #koala{ 
@@ -130,7 +131,7 @@ h3 {
 #Thorny_Devil{
     position:absolute;
     right: 15%;
-    bottom: 17%;
+    bottom: 14%;
 }
 
 #Australian_Fur_Seal{
@@ -167,15 +168,19 @@ h3 {
 }
 	
 #bush{
+	pointer-events: none;
 	position: absolute;
-	right: 10%;
-	top:55%;
+	right: 5%;
+	bottom:10%;
+	z-index: 3;
 }
 
 #bush1{
+	pointer-events: none;
 	position: absolute;
 	left: 30%;
 	top:65%;
+	z-index: 1;
 }
 
 #rock{

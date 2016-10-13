@@ -1,6 +1,6 @@
 <?php
 
-	$mysqli = new mysqli('localhost', 'root', '', 'australian wildlife');
+	$mysqli = new mysqli('localhost', 'root', '8157a8527338fbc8', 'australian wildlife');
 	$action=$_POST["action"];
 	//depending on the action value, run a different function
 	switch ($action) {
@@ -19,7 +19,7 @@
 	}
 	function getDataByrandomsky($mysqli) {
 		//get data for row with a particular id
-		$animal_id=mt_rand(1,3);		
+		$animal_id=mt_rand(1,8);		
 		$query = "SELECT * FROM sky WHERE ID=" . $animal_id;
 		$result = $mysqli->query($query);
 		while(list($ID, $Animal_Name, $Image, $Height, $Description) = $result->fetch_row()) {
@@ -30,7 +30,7 @@
 	
 	function getDataByrandomgrassland($mysqli) {
 		//get data for row with a particular id
-		$animal_id=mt_rand(1,3);		
+		$animal_id=mt_rand(1,8);		
 		$query = "SELECT * FROM grassland WHERE ID=" . $animal_id;
 		$result = $mysqli->query($query);
 		while(list($ID, $Animal_Name, $Image, $Height, $Description) = $result->fetch_row()) {
@@ -41,7 +41,7 @@
 	
 	function getDataByrandomunderground($mysqli) {
 		//get data for row with a particular id
-		$animal_id=mt_rand(1,3);		
+		$animal_id=mt_rand(1,8);		
 		$query = "SELECT * FROM underground WHERE ID=" . $animal_id;
 		$result = $mysqli->query($query);
 		while(list($ID, $Animal_Name, $Image, $Height, $Description) = $result->fetch_row()) {
@@ -52,7 +52,7 @@
 	
 	function getDataByrandomsea($mysqli) {
 		//get data for row with a particular id
-		$animal_id=mt_rand(1,3);		
+		$animal_id=mt_rand(1,8);		
 		$query = "SELECT * FROM sea WHERE ID=" . $animal_id;
 		$result = $mysqli->query($query);
 		while(list($ID, $Animal_Name, $Image, $Height, $Description) = $result->fetch_row()) {

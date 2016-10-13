@@ -7,16 +7,17 @@ var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordse
 var found = 0;
 
 var existing_animal=[];
-// A dictionary that stores all description of the animals
+// A dictionary that stores all description of all the hidden animals
 var animaldictionary = {};
 animaldictionary["koala"] = "The Koala is a unique Australian marsupial, often incorrectly called a Koala Bear. The males are larger than females. Koalas from southern areas are about 30% larger than the Queensland koalas Koala's fur is thick soft. Ears have long white hairs on the tips. Koalas can live as long as 17 years, however life expectancy is usually less than 10 years due to disease, attacks by dogs, road kills. Koalas sleep for about 75% of the time, becoming active after sunset. During the night they can be heard growling at other koalas.";
-animaldictionary["Gouldian_Finch"]="The Gouldian Finch is a beautiful finch with a bright green back, yellow belly and a purple breast. Most birds have a black face, but about 25% have red faces, and yellow-faced forms are rare. The males are brighter colours than the females. Juveniles are grey on the head and neck, and olive on the back and tail. The underparts are pale brownish white.";
-animaldictionary["Australian_Fur_Seal"]="The Australian Fur Seal is dark brown to brownish grey with mane of coarse hair. Pups black with silver. External ears visible.";
+animaldictionary["Gouldian Finch"]="The Gouldian Finch is a beautiful finch with a bright green back, yellow belly and a purple breast. Most birds have a black face, but about 25% have red faces, and yellow-faced forms are rare. The males are brighter colours than the females. Juveniles are grey on the head and neck, and olive on the back and tail. The underparts are pale brownish white.";
+animaldictionary["Australian Fur Seal"]="The Australian Fur Seal is dark brown to brownish grey with mane of coarse hair. Pups black with silver. External ears visible.";
+animaldictionary["Thorny_Devil"]="The Thorny Devil is an unusual little reptile covered in thorns including spines above each eye. This lizard belongs to the dragon family and is completely harmless. Thorny Devils have the ability to change colour from yellow to reddish brown to black, depending on which type of soil it is crossing. They each maturity after 3 years and live for about 20 years.";
 var click=4;
 $(document).ready(function(){	
 // Functions that be ran every time the browser was opened
 	$.ajax({
-		url: 'postData.php',
+		url: 'php/postData.php',
 		success: function(){
 		updataDisplay();
 	},
@@ -35,10 +36,6 @@ $(document).ready(function(){
 		animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 36 kg. They have a large, blunt head and a short, neck. Their sharp claws and stubby, powerful legs make them great diggers. Wombats can live for up to 27 years in captivity. It digs burrows and tunnels in the ground for shelter and to escape from danger. Despite their slow appearance they can run quite fast.";
 	}
 	});
-
-	
-	
-	//updataDisplay();
 	
 	//function for the hidden animal
 	var hidden_index =  $(".hidden_an").css("z-index")
@@ -127,7 +124,7 @@ function updataDisplay() {
 }
 
 function getphp_s(i){
-	$.post("postData.php", { action: 0 }, function(ajaxresult){
+	$.post("php/postData.php", { action: 0 }, function(ajaxresult){
 			var div_name="#sky_"+i;
 			var data=ajaxresult.split(":");
 			var id = data[0], 
@@ -150,7 +147,7 @@ function getphp_s(i){
 }
 
 function getphp_g(i){
-	$.post("postData.php", { action: 1 }, function(ajaxresult){
+	$.post("php/postData.php", { action: 1 }, function(ajaxresult){
 			var div_name="#grassland_"+i;
 			var data=ajaxresult.split(":");
 			var id = data[0], 
@@ -173,7 +170,7 @@ function getphp_g(i){
 }
 
 function getphp_u(i){
-	$.post("postData.php", { action: 2 }, function(ajaxresult){	
+	$.post("php/postData.php", { action: 2 }, function(ajaxresult){	
 			var div_name="#underground_"+i;
 			var data=ajaxresult.split(":");
 			var id = data[0], 
@@ -195,7 +192,7 @@ function getphp_u(i){
 }
 
 function getphp_se(i){
-	$.post("postData.php", { action: 3 }, function(ajaxresult){	
+	$.post("php/postData.php", { action: 3 }, function(ajaxresult){	
 			var div_name="#sea_"+i;
 			var data=ajaxresult.split(":");
 			var id = data[0], 
