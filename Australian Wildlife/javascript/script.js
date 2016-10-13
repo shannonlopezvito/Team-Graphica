@@ -51,7 +51,7 @@ $(document).ready(function(){
 		if ($(this).css("z-index")<2){
 		click-=1;
 		$("#counter").html("Number of hidden animals left to find: "+click);
-		alert("Cheers! You found a hidden animal!")
+		alert("Great work! You found a hidden animal!")
 		}
 		$(this).css({"z-index": 2});
 		$(this).children().show();

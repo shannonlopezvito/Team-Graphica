@@ -127,6 +127,12 @@ h3 {
 	top: 20%;
 }
 
+#Thorny_Devil{
+    position:absolute;
+    right: 15%;
+    bottom: 17%;
+}
+
 #Australian_Fur_Seal{
 	position: absolute;
 	right: 8%;
@@ -179,9 +185,11 @@ h3 {
 }
 	
 #rock1{
-	position: absolute;
-	left: 70%;
-	top: 60%;
+    pointer-events: none;
+	position:absolute;
+	z-index: 1;
+	right:10%;
+	bottom:10%;
 }
 	
 #coral{
