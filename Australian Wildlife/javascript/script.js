@@ -16,6 +16,7 @@ animaldictionary["Thorny_Devil"]="The Thorny Devil is an unusual little reptile 
 var click=4;
 $(document).ready(function(){	
 // Functions that be ran every time the browser was opened
+	scrolling();
 	$.ajax({
 		url: 'php/postData.php',
 		success: function(){
@@ -34,6 +35,10 @@ $(document).ready(function(){
 		animaldictionary["bilby"] ="The Bilby has long rabbit-like ears and pointed nose. The fur is silvery blue. It has a longish black and white tail. It has strong claws for digging."
 		animaldictionary["echidna"] ="The Short-beaked Echidna has a long sticky tongue for catching ants and other insects. It is a monotreme - that means it lays eggs. The prickly coat gives it protection - much like a hedgehog or porcupine. Has strong claws for digging and tearing termite mounds apart. Males have spur on ankle These are not venomous (unlike the Platypus spurs which are venomous).";
 		animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 36 kg. They have a large, blunt head and a short, neck. Their sharp claws and stubby, powerful legs make them great diggers. Wombats can live for up to 27 years in captivity. It digs burrows and tunnels in the ground for shelter and to escape from danger. Despite their slow appearance they can run quite fast.";
+		$('#statusmessage').text('Unable to connect to database, please check your internet connection.').animate({'margin-bottom':0},200);
+		setTimeout( function(){
+        $('#statusmessage').animate({'margin-bottom':-55},200);
+		}, 4*1000);
 	}
 	});
 	
@@ -48,12 +53,23 @@ $(document).ready(function(){
 		if ($(this).css("z-index")<2){
 		click-=1;
 		$("#counter").html("Number of hidden animals left to find: "+click);
-		alert("Great work! You found a hidden animal!")
+
+		//alert the user they had found the hidden animals
+		if (click==0){
+		$('#statusmessage').text('You found all the hidden animals! Refresh the page to see animals changing!').animate({'margin-bottom':0},200);
+		} else{
+			$('#statusmessage').text('Cheers, you find a hidden animal!').animate({'margin-bottom':0},200);
 		}
+		setTimeout( function(){
+        $('#statusmessage').animate({'margin-bottom':-55},200);
+		}, 2*1000);
+		}
+		
+	
 		$(this).css({"z-index": 2});
 		$(this).children().show();
-		
 	});
+	
 	
 	//Code snippets from (Source: Highlight nav links when scrolling the page from blyk)
 	// A function that highlights a link, when the user's move enter a section
@@ -391,3 +407,17 @@ function refresh() {
     location.reload();
 }
 
+function scrolling() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+}
