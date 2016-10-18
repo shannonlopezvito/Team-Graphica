@@ -3,3 +3,6 @@ http://deco1800.uqcloud.net/examples/basicTroveSearch.html
 http://deco1800.uqcloud.net/examples/troveImage.php
 https://css-tricks.com/better-tabs-with-round-out-borders/
 http://www.w3schools.com/w3css/w3css_modal.asp
+https://css-tricks.com/snippets/jquery/smooth-scrolling/
+http://stackoverflow.com/questions/7828251/jquery-status-box-pop-up-and-hide-after-a-short-while
+

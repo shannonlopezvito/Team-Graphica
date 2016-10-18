@@ -35,6 +35,7 @@ $(document).ready(function(){
 		animaldictionary["bilby"] ="The Bilby has long rabbit-like ears and pointed nose. The fur is silvery blue. It has a longish black and white tail. It has strong claws for digging."
 		animaldictionary["echidna"] ="The Short-beaked Echidna has a long sticky tongue for catching ants and other insects. It is a monotreme - that means it lays eggs. The prickly coat gives it protection - much like a hedgehog or porcupine. Has strong claws for digging and tearing termite mounds apart. Males have spur on ankle These are not venomous (unlike the Platypus spurs which are venomous).";
 		animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 36 kg. They have a large, blunt head and a short, neck. Their sharp claws and stubby, powerful legs make them great diggers. Wombats can live for up to 27 years in captivity. It digs burrows and tunnels in the ground for shelter and to escape from danger. Despite their slow appearance they can run quite fast.";
+		//Code snippets from (Source: jquery status box pop up and hide after a short while from stackoverflow)
 		$('#statusmessage').text('Unable to connect to database, please check your internet connection.').animate({'margin-bottom':0},200);
 		setTimeout( function(){
         $('#statusmessage').animate({'margin-bottom':-55},200);
@@ -407,6 +408,8 @@ function refresh() {
     location.reload();
 }
 
+//Code snippets from (Source: Smooth Scrolling from CSS TRICKS)
+// Smooth scrolling function
 function scrolling() {
   $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
