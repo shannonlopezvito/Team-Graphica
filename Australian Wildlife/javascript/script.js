@@ -1,11 +1,9 @@
-//Global variable
+//Global variables
 var apiKey = "laktuo6dkdd22o5m";
 var animalname = "";
-
 var loadedImages = [];
 var urlPatterns = ["flickr.com", "nla.gov.au", "artsearch.nga.gov.au", "recordsearch.naa.gov.au", "images.slsa.sa.gov.au"];
 var found = 0;
-
 var existing_animal=[];
 // A dictionary that stores all description of all the hidden animals
 var animaldictionary = {};
@@ -14,15 +12,22 @@ animaldictionary["Gouldian Finch"]="The Gouldian Finch is a beautiful finch with
 animaldictionary["Australian Fur Seal"]="The Australian Fur Seal is dark brown to brownish grey with mane of coarse hair. Pups black with silver. External ears visible.";
 animaldictionary["Thorny_Devil"]="The Thorny Devil is an unusual little reptile covered in thorns including spines above each eye. This lizard belongs to the dragon family and is completely harmless. Thorny Devils have the ability to change colour from yellow to reddish brown to black, depending on which type of soil it is crossing. They each maturity after 3 years and live for about 20 years.";
 var click=4;
-$(document).ready(function(){	
+
 // Functions that be ran every time the browser was opened
+$(document).ready(function(){	
+	
+	// A function that enables smooth scrolling effect
 	scrolling();
+	
+	// Check whether the page can connect to the database
 	$.ajax({
 		url: 'php/postData.php',
-		success: function(){
+	success: function(){
+	// If successful run updataDisplay
 		updataDisplay();
 	},
 	error: function(){
+	// Else, populate the animaldictionary with default animals
 		animaldictionary["flying fox"] = "The Grey-headed Flying-fox has dark brown body and grey head, Reddish collar round the neck. Thick leg fur down to ankle. Roosts in large camps in branches of large trees.";
 		animaldictionary["kookaburra"] = "The Laughing Kookaburra is a stocky bird with large head and a short neck and blunt tail. Beak is fairly long and sturdy. The wings are brown with blue mottling, the back is brown and the tail reddish. The males have a patch of blue-green feathers in the center of the rump - this less noticeable on the females.";
 		animaldictionary["numbat"] = "The Numbat is a red-brown marsupial with six or seven vertical white bars on the back. It has a black stripe along the head. The snout is pointed , and they have a small mouth and a long, sticky tongue . The long bushy tail resembles a bottlebrush.";
@@ -35,11 +40,14 @@ $(document).ready(function(){
 		animaldictionary["bilby"] ="The Bilby has long rabbit-like ears and pointed nose. The fur is silvery blue. It has a longish black and white tail. It has strong claws for digging."
 		animaldictionary["echidna"] ="The Short-beaked Echidna has a long sticky tongue for catching ants and other insects. It is a monotreme - that means it lays eggs. The prickly coat gives it protection - much like a hedgehog or porcupine. Has strong claws for digging and tearing termite mounds apart. Males have spur on ankle These are not venomous (unlike the Platypus spurs which are venomous).";
 		animaldictionary["wombat"] = "Wombats are stout marsupials and can weigh up to 36 kg. They have a large, blunt head and a short, neck. Their sharp claws and stubby, powerful legs make them great diggers. Wombats can live for up to 27 years in captivity. It digs burrows and tunnels in the ground for shelter and to escape from danger. Despite their slow appearance they can run quite fast.";
-		//Code snippets from (Source: jquery status box pop up and hide after a short while from stackoverflow)
+		
+		//Code snippets from (7. Source: jquery status box pop up and hide after a short while from stackoverflow)
+		// alert the user that the database can not be connected
 		$('#statusmessage').text('Unable to connect to database, please check your internet connection.').animate({'margin-bottom':0},200);
 		setTimeout( function(){
         $('#statusmessage').animate({'margin-bottom':-55},200);
 		}, 4*1000);
+		// the message will automatically disappears after a few seconds
 	}
 	});
 	
@@ -58,12 +66,16 @@ $(document).ready(function(){
 		//alert the user they had found the hidden animals
 		if (click==0){
 		$('#statusmessage').text('You found all the hidden animals! Refresh the page to see animals changing!').animate({'margin-bottom':0},200);
-		} else{
-			$('#statusmessage').text('Cheers, you find a hidden animal!').animate({'margin-bottom':0},200);
-		}
 		setTimeout( function(){
         $('#statusmessage').animate({'margin-bottom':-55},200);
-		}, 2*1000);
+		}, 4*1000);
+		} else{
+			$('#statusmessage').text('Congratulations, you find a hidden animal!').animate({'margin-bottom':0},200);
+			setTimeout( function(){
+        $('#statusmessage').animate({'margin-bottom':-55},200);
+		}, 3*1000);
+		}
+		
 		}
 		
 	
@@ -72,7 +84,7 @@ $(document).ready(function(){
 	});
 	
 	
-	//Code snippets from (Source: Highlight nav links when scrolling the page from blyk)
+	//Code snippets from (1.Source: Highlight nav links when scrolling the page from blyk)
 	// A function that highlights a link, when the user's move enter a section
 	$(".bgimg").mouseenter(function(){
 		var id = $(this).attr('id')+"_link";
@@ -131,6 +143,7 @@ $(document).ready(function(){
 	}
 });
 
+// function can connects to the database for the random animal function
 function updataDisplay() {
 	for (i = 1; i <= 3; i++) {
 		getphp_s(i);
@@ -151,7 +164,6 @@ function getphp_s(i){
 			description = data[4];
 		if ($.inArray(name, existing_animal)==-1){
 			existing_animal.push(name);	
-			//alert(name);
 			$(div_name).find('img').attr('src',image);
 			$(div_name).find('img').height(height);
 			$(div_name).find('img').attr('alt',name);
@@ -253,7 +265,6 @@ function opentab(evt, tabName) {
 //Code snippets from (Source: Trove Ultra Basic Example Code from DECO1800/7180 Course Rescource)
 // Function that get a random article from Trove
 function getArticle(){
-// Get the values from our search form
 	var searchTerm = animalname;			  
 	var searchZone = "newspaper";
 	var sortBy = "relevance";
@@ -280,12 +291,11 @@ function getArticle(){
 	
 }
 
-//Code snippets from (Source: Images & Trove from DECO1800/7180 Course Rescource)
+//Code snippets from (3. Source: Images & Trove from DECO1800/7180 Course Rescource)
 function waitForFlickr() {
 	if(found == loadedImages.length) {
 		printImages();
 	}else if(found+1 == loadedImages.length||found-1 == loadedImages.length){
-		// error in the sample code?
 		printImages();
 	}else {
 		setTimeout(waitForFlickr, 250);
@@ -309,10 +319,7 @@ function getImage(){
     });
 }
 
-/*
-*   Depending where the image comes from, there is a special way to get that image from the website.
-*   This function works out where the image is from, and gets the image URL
-*/
+//This function works out where the image is from, and gets the image URL
 function processImages(index, troveItem) {
     var imgUrl = troveItem.identifier[0].value;
     if (imgUrl.indexOf(urlPatterns[0]) >= 0) { // flickr
@@ -361,7 +368,7 @@ function addFlickrItem(imgUrl, troveItem) {
 }
 
 function printImages() {
-	// Print out one random image
+	// Print out one random image from Trove
 	var length = loadedImages.length;
 	var value = Math.floor(Math.random() * length) + 1;
     for (var i in loadedImages) {
@@ -381,7 +388,6 @@ function printImages() {
     }
 }
 
-// from http://css-tricks.com/snippets/javascript/get-url-variables/
 function getQueryVariable(variable, url) {
     var query = url.split("?");
     var vars = query[1].split("&");
@@ -408,7 +414,7 @@ function refresh() {
     location.reload();
 }
 
-//Code snippets from (Source: Smooth Scrolling from CSS TRICKS)
+//Code snippets from (6. Source: Smooth Scrolling from CSS TRICKS)
 // Smooth scrolling function
 function scrolling() {
   $('a[href*="#"]:not([href="#"])').click(function() {

@@ -16,7 +16,8 @@ h1{
 h3 {
 	letter-spacing: 5px;
 	text-transform: uppercase;
-	font: 20px "Lato", sans-serif;
+	font-size: 20px;
+	font-family: sans-serif, Castella, Times New Roman;
 	color: #111;
 }
 
@@ -38,6 +39,11 @@ h3 {
 	color: #000;
 }
 
+/*style for the scroll gif*/
+#scroll{
+	position: relative;
+	margin-top:90px;
+}
 
 /*Style for animal images*/
 #sky_1{
@@ -266,7 +272,7 @@ nav{
 	width:100%;
 	height: 50px;
 	margin-top:0px;
-	z-index:100;
+	z-index:90;
 }
 
 ul{
@@ -351,12 +357,12 @@ footer{
 	padding-left: 20px;
 }
 
-/*Code snippets from (Source: W3.CSS Modal Code from W3school)*/
+/*Code snippets from (5. Source: W3.CSS Modal Code from W3school)*/
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: absolute; 
-    z-index: 90; 
+    z-index: 100; 
     padding-top: 55px; 
     left: 0;
     top: 0;
@@ -391,7 +397,7 @@ footer{
 }
 
 
-/*Code snippets from (Source: (Better) Tabs with Round Out Borders code by Chris Coyier)*/
+/*Code snippets from (4. Source: (Better) Tabs with Round Out Borders code by Chris Coyier)*/
 /* Style the tab content */
 .tabcontent {
     display: none;
@@ -473,11 +479,8 @@ ul.tab li:hover {
     transform: scale(1.2);
 }
 
-#scroll{
-	position: relative;
-	margin-top:90px;
-}
 
+/*style for the status message fixed throughout the page*/
 #statusmessage{
 	z-index:50;
 	margin:auto;

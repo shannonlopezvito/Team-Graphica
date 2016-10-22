@@ -1,8 +1,11 @@
-https://css-tricks.com/forums/topic/highlight-nav-links-when-scrolling-the-page/
-http://deco1800.uqcloud.net/examples/basicTroveSearch.html
-http://deco1800.uqcloud.net/examples/troveImage.php
-https://css-tricks.com/better-tabs-with-round-out-borders/
-http://www.w3schools.com/w3css/w3css_modal.asp
-https://css-tricks.com/snippets/jquery/smooth-scrolling/
-http://stackoverflow.com/questions/7828251/jquery-status-box-pop-up-and-hide-after-a-short-while
+Code Snippets
+1. blyk. Highlight nav links when scrolling the page(2014). CSS-TRICKS. https://css-tricks.com/forums/topic/highlight-nav-links-when-scrolling-the-page/
+2. Creator Unknown. basicTroveSearch (Date Unknown). DECO1800. http://deco1800.uqcloud.net/examples/basicTroveSearch.html
+3. Creator Unknown. troveImage (Date Unkown). DECO1800. http://deco1800.uqcloud.net/examples/troveImage.php
+4. Chris Coyier. (Better) Tabs with Round Out Borders code (2016). CSS-TRICKS. https://css-tricks.com/better-tabs-with-round-out-borders/
+5. Creator Unknown. W3.CSS Modal (Date Unkown). w3schools.com. http://www.w3schools.com/w3css/w3css_modal.asp
+6. Chris Coyier. Smooth Scrolling (2016). CSS-TRICKS. https://css-tricks.com/snippets/jquery/smooth-scrolling/
+7. Gaby aka G. Petrioli. jquery status box pop up and hide after a short while (2016). stackoverflow. http://stackoverflow.com/questions/7828251/jquery-status-box-pop-up-and-hide-after-a-short-while
 
+Images in the site(Refer to the alt tag in the html code)
+1. Creator Unknown. koala8 (Date Unknown) Clipart Kid. http://www.clipartkid.com/koala8-IFvC8k-clipart/
