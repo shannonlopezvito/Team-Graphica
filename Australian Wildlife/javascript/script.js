@@ -70,7 +70,7 @@ $(document).ready(function(){
         $('#statusmessage').animate({'margin-bottom':-55},200);
 		}, 4*1000);
 		} else{
-			$('#statusmessage').text('Congratulations, you find a hidden animal!').animate({'margin-bottom':0},200);
+			$('#statusmessage').text('Congratulations, you found a hidden animal!').animate({'margin-bottom':0},200);
 			setTimeout( function(){
         $('#statusmessage').animate({'margin-bottom':-55},200);
 		}, 3*1000);
