@@ -255,7 +255,7 @@ function opentab(evt, tabName) {
 		$(tablinks[i]).parent().css("background-color", "#ECECEC");
     }  
 	// check if the modal just opened, highlight the default tab "description"
-	if (evt.currentTarget.id==animalname){
+	if (evt.currentTarget.id!="article" && evt.currentTarget.id!="images" && evt.currentTarget.id!="description"){
 		$(tablinks[0]).parent().css("background-color", "#ccc");
 	}
 	$(evt.currentTarget).parent().css("background-color", "#ccc");
